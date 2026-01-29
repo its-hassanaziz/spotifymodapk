@@ -1,0 +1,23 @@
+# Netlify redirects for clean URLs and 404 handling
+
+# Redirect .html to clean URLs (301 permanent)
+/index.html      /               301
+/apk.html        /apk/           301
+/ios.html        /ios/           301
+/mac.html        /mac/           301
+/windows.html    /windows/       301
+/blogs.html      /blogs/         301
+
+# Handle trailing slash consistency
+/apk             /apk/           301
+/ios             /ios/           301
+/mac             /mac/           301
+/windows         /windows/       301
+/blogs           /blogs/         301
+
+# Allow thank-you page
+/thank-you       /thank-you.html 200
+/thank-you.html  /thank-you.html 200
+
+# Custom 404 page
+/*               /404.html       404

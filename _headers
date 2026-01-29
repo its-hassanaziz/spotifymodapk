@@ -1,0 +1,47 @@
+# Netlify Headers Configuration
+# SEO Optimized: Cache control for performance + Security headers
+
+# Global headers for all pages
+/*
+  # Security Headers
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'
+
+# Static assets - Long cache (1 year)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS files
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: text/css
+
+# JavaScript files
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: application/javascript
+
+# Images
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Favicon
+/favicon.svg
+  Cache-Control: public, max-age=31536000, immutable
+  Content-Type: image/svg+xml
+
+# HTML pages - Short cache for freshness
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Index pages in directories
+/*/
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Root index
+/
+  Cache-Control: public, max-age=0, must-revalidate
