@@ -17,10 +17,16 @@
   minify = true
 
 [build.processing.html]
-  pretty_urls = true
+  pretty_urls = false
 
 [build.processing.images]
   compress = true
+
+# Custom 404 page
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
 
 # Headers for caching and security
 [[headers]]

@@ -14,10 +14,3 @@
 /mac             /mac/           301
 /windows         /windows/       301
 /blogs           /blogs/         301
-
-# Allow thank-you page
-/thank-you       /thank-you.html 200
-/thank-you.html  /thank-you.html 200
-
-# Custom 404 page
-/*               /404.html       404
