@@ -377,7 +377,7 @@
             font-weight: 700;
             text-decoration: none;
             border-radius: 9999px;
-            border: none;
+            border: 2px solid #fff;
             transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
             box-shadow: 0 4px 15px rgba(30, 215, 96, 0.3);
             white-space: nowrap;
@@ -688,7 +688,7 @@
         
         /* App Info Section - Table of Details */
         .app-info-section {
-            padding: 4rem 0;
+            padding: 2.5rem 0;
             background: 
                 /* Canvas Woven Texture - Horizontal threads */
                 repeating-linear-gradient(
@@ -1497,7 +1497,7 @@
                 radial-gradient(ellipse at 70% 80%, rgba(30, 185, 84, 0.06) 0%, transparent 45%),
                 /* Base color */
                 var(--color-bg-dark);
-            padding: 4rem 0;
+            padding: 1rem 0;
         }
         
         .toc-section .container {
@@ -1615,6 +1615,66 @@
         }
         
         /* =============================================
+           STICKY BOTTOM DOWNLOAD BAR (Mobile Only)
+           ============================================= */
+        .sticky-download-bar {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .sticky-download-bar {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 9999;
+                background: rgba(18, 18, 18, 0.95);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                padding: 0.75rem 1rem;
+                transform: translateY(100%);
+                transition: transform 0.3s ease;
+                box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .sticky-download-bar.visible {
+                transform: translateY(0);
+            }
+            
+            .sticky-download-bar__btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                width: 100%;
+                height: 48px;
+                background: #1ED760;
+                color: #000;
+                font-size: 1rem;
+                font-weight: 700;
+                text-decoration: none;
+                border-radius: 9999px;
+                border: none;
+                box-shadow: 0 4px 15px rgba(30, 215, 96, 0.3);
+                transition: transform 0.2s ease, filter 0.2s ease;
+            }
+            
+            .sticky-download-bar__btn:hover,
+            .sticky-download-bar__btn:active {
+                filter: brightness(1.1);
+                transform: scale(0.98);
+            }
+            
+            .sticky-download-bar__btn svg {
+                width: 20px;
+                height: 20px;
+                flex-shrink: 0;
+            }
+        }
+        
+        /* =============================================
            DETAILS SECTION - SEO Content Cards
            ============================================= */
         .details-section {
@@ -1648,7 +1708,7 @@
                 radial-gradient(ellipse at 20% 70%, rgba(30, 185, 84, 0.05) 0%, transparent 50%),
                 /* Base color */
                 var(--color-bg-dark);
-            padding: 4rem 0;
+            padding: 2rem 0;
         }
         
         .details-section .container {
@@ -1963,7 +2023,7 @@
                 radial-gradient(ellipse at 50% 50%, rgba(30, 185, 84, 0.08) 0%, transparent 60%),
                 /* Base color */
                 var(--color-bg-dark);
-            padding: 3rem 0 4rem;
+            padding: 0cap 0;
         }
         
         .share-section .container {
@@ -2744,7 +2804,7 @@
         
         @media (max-width: 768px) {
             .scroll-to-top {
-                bottom: 16px;
+                bottom: 80px;
                 right: 16px;
                 width: 36px;
                 height: 36px;
@@ -4447,6 +4507,16 @@
     })();
     </script>
     
+    <!-- Sticky Bottom Download Bar (Mobile Only) -->
+    <div class="sticky-download-bar" id="stickyDownloadBar">
+        <a href="apk/index.html" class="sticky-download-bar__btn" aria-label="Download Spotify Premium Mod APK">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/>
+            </svg>
+            Download APK
+        </a>
+    </div>
+    
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -4454,11 +4524,12 @@
         </svg>
     </button>
     
-    <!-- Scroll to Top Script -->
+    <!-- Scroll to Top & Sticky Download Bar & TOC Accordion Script -->
     <script>
     (function() {
         'use strict';
         
+        // === SCROLL TO TOP ===
         var scrollToTopBtn = document.getElementById('scrollToTop');
         var scrollThreshold = 400;
         
@@ -4483,6 +4554,28 @@
         
         // Initial check
         toggleScrollButton();
+        
+        // === STICKY DOWNLOAD BAR (Mobile Only) ===
+        var stickyBar = document.getElementById('stickyDownloadBar');
+        var heroSection = document.querySelector('.hero');
+        var stickyThreshold = 600; // Show after scrolling 600px
+        
+        function toggleStickyBar() {
+            // Only show on mobile (match CSS media query)
+            if (window.innerWidth <= 768) {
+                if (window.pageYOffset > stickyThreshold) {
+                    stickyBar.classList.add('visible');
+                } else {
+                    stickyBar.classList.remove('visible');
+                }
+            } else {
+                stickyBar.classList.remove('visible');
+            }
+        }
+        
+        window.addEventListener('scroll', toggleStickyBar, { passive: true });
+        window.addEventListener('resize', toggleStickyBar, { passive: true });
+        toggleStickyBar();
     })();
     </script>
 </body>
