@@ -3830,25 +3830,25 @@
         }
         @media (max-width: 640px) {
             .footer__content {
-                grid-template-columns: 1fr 1fr !important;
-                gap: 1.5rem 1rem !important;
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 1.5rem !important;
             }
             .footer__brand {
-                grid-column: span 2 !important;
                 text-align: center !important;
             }
             .footer__column {
-                min-width: 0 !important;
+                width: 100% !important;
             }
             .footer__column-title {
-                font-size: 0.75rem !important;
+                font-size: 0.8125rem !important;
                 margin-bottom: 0.75rem !important;
             }
             .footer__list {
                 gap: 0.5rem !important;
             }
             .footer__list a {
-                font-size: 0.75rem !important;
+                font-size: 0.8125rem !important;
             }
             .footer__socials {
                 justify-content: center !important;
