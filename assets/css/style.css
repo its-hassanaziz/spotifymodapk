@@ -1112,57 +1112,89 @@ p {
     
     .footer__brand {
         grid-column: span 2;
-    }
-}
-
-@media (max-width: 640px) {
-    .footer {
-        padding: 2rem 0 1rem;
-    }
-    
-    .footer__content {
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem 1rem;
-        align-items: start;
-    }
-    
-    .footer__brand {
-        grid-column: span 2;
         text-align: center;
-    }
-    
-    .footer__column {
-        align-items: flex-start;
-    }
-    
-    .footer__column.footer__brand {
-        align-items: center;
     }
     
     .footer__socials {
         justify-content: center;
     }
+}
 
-    .footer__bottom {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 0 1.25rem;
     }
-
+    
+    .footer__content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    /* Brand Section */
+    .footer__brand {
+        text-align: center;
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid #282828;
+    }
+    
     .footer__brand-title {
         font-size: 1.125rem;
+        margin-bottom: 0.5rem;
     }
-
+    
     .footer__brand-desc {
         font-size: 0.8125rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .footer__socials {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .footer__social-link {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Footer Links Container */
+    .footer__column:not(.footer__brand) {
+        width: 100%;
     }
     
     .footer__column-title {
-        font-size: 0.8125rem;
+        font-size: 0.75rem;
+        margin-bottom: 0.625rem;
+        letter-spacing: 0.75px;
+    }
+    
+    .footer__list {
+        gap: 0.5rem;
     }
     
     .footer__list a {
         font-size: 0.8125rem;
+        padding: 0.125rem 0;
+        display: inline-block;
+    }
+    
+    /* Bottom Bar */
+    .footer__bottom {
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: center;
+        padding-top: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    .footer__bottom-left,
+    .footer__bottom-right {
+        font-size: 0.6875rem;
     }
 }
 
