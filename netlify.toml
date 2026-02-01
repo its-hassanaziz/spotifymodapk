@@ -93,9 +93,3 @@
   from = "/blogs/index.html"
   to = "/blogs/"
   status = 301
-
-# Custom 404 page
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
