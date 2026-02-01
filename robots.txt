@@ -1,11 +1,59 @@
 # Robots.txt for Spotify Mod APK
 # https://spotifymod.com/robots.txt
+# Last updated: February 2026
 
+# Allow all crawlers
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /*?*
 
-# Sitemap location
+# Google Bot - No crawl delay for faster indexing
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /assets/images/
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo Bot
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Yandex Bot
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# Baidu Bot
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Block AI training bots (optional - remove if you want AI indexing)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+# Sitemap locations
 Sitemap: https://spotifymod.com/sitemap.xml
 
-# Crawl-delay (optional - be gentle on server)
-Crawl-delay: 1
+# Host directive (for Yandex)
+Host: https://spotifymod.com
