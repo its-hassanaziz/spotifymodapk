@@ -3832,74 +3832,98 @@
             .footer {
                 padding: 1.5rem 0 1rem !important;
             }
+            .footer .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
             .footer__content {
                 display: grid !important;
                 grid-template-columns: 1fr 1fr !important;
-                gap: 1rem 0.75rem !important;
+                gap: 0.75rem !important;
                 padding: 0 !important;
+                margin: 0 !important;
             }
             .footer__brand {
                 grid-column: span 2 !important;
                 text-align: center !important;
-                margin-bottom: 0.5rem !important;
-                padding-bottom: 0.75rem !important;
+                margin: 0 0 0.75rem 0 !important;
+                padding: 0 0 0.75rem 0 !important;
                 border-bottom: 1px solid #282828 !important;
             }
             .footer__brand-title {
                 font-size: 1.125rem !important;
-                margin-bottom: 0.5rem !important;
+                margin: 0 0 0.5rem 0 !important;
+                padding: 0 !important;
             }
             .footer__brand-desc {
                 font-size: 0.8125rem !important;
-                margin-bottom: 0.75rem !important;
+                margin: 0 0 0.75rem 0 !important;
+                padding: 0 !important;
                 line-height: 1.5 !important;
             }
             .footer__column {
                 padding: 0 !important;
+                margin: 0 !important;
+            }
+            .footer__column:nth-child(2) {
+                padding-right: 0.5rem !important;
+            }
+            .footer__column:nth-child(3) {
+                padding-left: 0.5rem !important;
             }
             .footer__column:last-child {
                 grid-column: span 2 !important;
                 text-align: center !important;
-                margin-top: 0.25rem !important;
-                padding-top: 0.75rem !important;
+                margin: 0.5rem 0 0 0 !important;
+                padding: 0.75rem 0 0 0 !important;
                 border-top: 1px solid #282828 !important;
+            }
+            .footer__column:last-child .footer__column-title {
+                margin: 0 0 0.5rem 0 !important;
             }
             .footer__column:last-child .footer__list {
                 flex-direction: row !important;
                 flex-wrap: wrap !important;
                 justify-content: center !important;
-                gap: 0.25rem 1rem !important;
+                gap: 0.25rem 0.75rem !important;
             }
             .footer__column-title {
                 font-size: 0.75rem !important;
-                margin-bottom: 0.5rem !important;
+                margin: 0 0 0.5rem 0 !important;
+                padding: 0 !important;
             }
             .footer__list {
-                gap: 0.35rem !important;
+                gap: 0.4rem !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
             .footer__list li {
                 margin: 0 !important;
                 padding: 0 !important;
+                line-height: 1.3 !important;
             }
             .footer__list a {
                 font-size: 0.8125rem !important;
-                line-height: 1.4 !important;
+                line-height: 1.3 !important;
+                display: block !important;
             }
             .footer__socials {
                 justify-content: center !important;
-                margin-bottom: 0.25rem !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
             .footer__bottom {
                 flex-direction: column !important;
-                gap: 0.35rem !important;
+                gap: 0.25rem !important;
                 text-align: center !important;
-                margin-top: 0.5rem !important;
-                padding-top: 0.75rem !important;
+                margin: 0.75rem 0 0 0 !important;
+                padding: 0.75rem 0 0 0 !important;
             }
             .footer__bottom-left,
             .footer__bottom-right {
                 font-size: 0.75rem !important;
                 margin: 0 !important;
+                padding: 0 !important;
             }
         }
     </style>
