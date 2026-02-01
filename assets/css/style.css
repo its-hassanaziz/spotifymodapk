@@ -235,8 +235,6 @@ p {
     top: 0;
     z-index: 100000;
     background: rgba(18, 18, 18, 0.98);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--color-bg-elevated);
     margin-bottom: 0;
 }
@@ -695,7 +693,6 @@ p {
     padding: 6px 10px;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
-    backdrop-filter: blur(4px);
 }
 
 .phone-slider__dot {
