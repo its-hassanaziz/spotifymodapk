@@ -69,3 +69,9 @@
 
 /privacy/
   Cache-Control: no-cache
+
+/terms/
+  Cache-Control: no-cache
+
+/disclaimer/
+  Cache-Control: no-cache

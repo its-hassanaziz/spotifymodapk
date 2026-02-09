@@ -9,11 +9,11 @@
     <meta http-equiv="Cache-Control" content="no-cache">
     
     <!-- SEO Meta Tags -->
-    <title>Privacy Policy - Spotify Mod APK</title>
-    <meta name="title" content="Privacy Policy - Spotify Mod APK">
-    <meta name="description" content="Read our Privacy Policy to understand how Spotify Mod APK collects, uses, and protects your personal information when you visit our website.">
+    <title>Contact Us - Spotify Mod APK</title>
+    <meta name="title" content="Contact Us - Spotify Mod APK">
+    <meta name="description" content="Get in touch with Spotify Mod APK team. Have questions, feedback, or need support? Contact us through our form or reach out via email and Telegram.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://spotifymod.com/privacy/">
+    <link rel="canonical" href="https://spotifymod.com/contact/">
     
     <!-- Theme -->
     <meta name="theme-color" content="#1DB954">
@@ -77,12 +77,13 @@
             border-radius: 0 0 8px 8px;
             z-index: 9999;
             font-weight: 600;
+            text-decoration: none;
         }
         
         .skip-link:focus {
             top: 0;
         }
-
+        
         .container {
             width: 100%;
             max-width: 1280px;
@@ -161,13 +162,13 @@
         }
         
         /* Hero */
-        .privacy-hero {
+        .contact-hero {
             padding: 140px 0 60px;
             text-align: center;
             background: linear-gradient(180deg, rgba(30, 215, 96, 0.08) 0%, transparent 100%);
         }
         
-        .privacy-hero__icon {
+        .contact-hero__icon {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -179,54 +180,43 @@
             box-shadow: 0 8px 32px rgba(30, 215, 96, 0.3);
         }
         
-        .privacy-hero__icon svg {
+        .contact-hero__icon svg {
             width: 40px;
             height: 40px;
             color: #000;
         }
         
-        .privacy-hero__title {
+        .contact-hero__title {
             font-size: 2.75rem;
             font-weight: 700;
             margin-bottom: 0.75rem;
         }
         
-        .privacy-hero__title span { color: var(--color-primary); }
+        .contact-hero__title span { color: var(--color-primary); }
         
-        .privacy-hero__updated {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: var(--color-bg-card);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 999px;
-            font-size: 0.875rem;
+        .contact-hero__desc {
+            font-size: 1.125rem;
             color: var(--color-text-secondary);
-        }
-        
-        .privacy-hero__updated svg {
-            width: 16px;
-            height: 16px;
-            color: var(--color-primary);
-        }
-        
-        /* Content Section */
-        .privacy-section {
-            padding: 3rem 0 5rem;
-        }
-        
-        .privacy-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            width: 100%;
-            max-width: 1280px;
+            max-width: 600px;
             margin: 0 auto;
         }
         
-        /* Privacy Card */
-        .privacy-card {
+        /* Content Section */
+        .contact-section {
+            padding: 3rem 0 5rem;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        /* Contact Card */
+        .contact-card {
             background: var(--color-bg-card);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 16px;
@@ -234,19 +224,19 @@
             transition: all 0.3s ease;
         }
         
-        .privacy-card:hover {
+        .contact-card:hover {
             border-color: rgba(30, 215, 96, 0.3);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         
-        .privacy-card__header {
+        .contact-card__header {
             display: flex;
             align-items: flex-start;
             gap: 1rem;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
         }
         
-        .privacy-card__icon {
+        .contact-card__icon {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -258,183 +248,323 @@
             flex-shrink: 0;
         }
         
-        .privacy-card__icon svg {
+        .contact-card__icon svg {
             width: 24px;
             height: 24px;
             color: var(--color-primary);
         }
         
-        .privacy-card__title {
+        .contact-card__title {
             font-size: 1.375rem;
             font-weight: 700;
             color: var(--color-text-primary);
             margin-top: 0.25rem;
         }
         
-        .privacy-card__content {
+        /* Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-form__group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .contact-form__label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+        
+        .contact-form__input,
+        .contact-form__textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            background: var(--color-bg-elevated);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: var(--color-text-primary);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+        
+        .contact-form__input:focus,
+        .contact-form__textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(30, 215, 96, 0.1);
+        }
+        
+        .contact-form__input::placeholder,
+        .contact-form__textarea::placeholder {
             color: var(--color-text-secondary);
-            line-height: 1.8;
         }
         
-        .privacy-card__content p {
-            margin-bottom: 1rem;
+        .contact-form__textarea {
+            min-height: 150px;
+            resize: vertical;
         }
         
-        .privacy-card__content p:last-child {
-            margin-bottom: 0;
+        .contact-form__submit {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: var(--color-primary);
+            color: #000;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 0.5rem;
         }
         
-        .privacy-card__content ul {
-            margin: 1rem 0;
-            padding-left: 1.25rem;
+        .contact-form__submit:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
         }
         
-        .privacy-card__content li {
-            margin-bottom: 0.625rem;
-            position: relative;
+        .contact-form__submit svg {
+            width: 20px;
+            height: 20px;
         }
         
-        .privacy-card__content li::marker {
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Contact Info */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-info__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: var(--color-bg-elevated);
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .contact-info__item:hover {
+            background: rgba(30, 215, 96, 0.1);
+        }
+        
+        .contact-info__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: rgba(30, 215, 96, 0.15);
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+        
+        .contact-info__icon svg {
+            width: 22px;
+            height: 22px;
             color: var(--color-primary);
         }
         
-        .privacy-card__content strong {
-            color: var(--color-text-primary);
-            font-weight: 600;
+        .contact-info__content {
+            flex: 1;
         }
         
-        .privacy-card__content a {
+        .contact-info__label {
+            display: block;
+            font-size: 0.8125rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-info__value {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+        
+        .contact-info__value a {
             color: var(--color-primary);
             text-decoration: none;
             transition: opacity 0.2s;
         }
         
-        .privacy-card__content a:hover {
+        .contact-info__value a:hover {
             opacity: 0.8;
-            text-decoration: underline;
         }
         
-        /* Contact Button */
-        .privacy-contact-btn {
-            display: inline-flex;
+        /* Response Time */
+        .contact-response {
+            display: flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 1.5rem;
-            background: var(--color-primary);
-            color: #000 !important;
-            font-weight: 600;
-            border-radius: 999px;
-            text-decoration: none !important;
-            margin-top: 0.5rem;
-            transition: all 0.2s ease;
-        }
-        
-        .privacy-contact-btn:hover {
-            opacity: 0.9 !important;
-            transform: scale(1.02);
-        }
-        
-        /* Highlight Box */
-        .privacy-highlight {
-            background: rgba(30, 215, 96, 0.08);
-            border-left: 3px solid var(--color-primary);
+            gap: 0.75rem;
             padding: 1rem 1.25rem;
-            border-radius: 0 8px 8px 0;
-            margin: 1rem 0;
+            background: rgba(30, 215, 96, 0.08);
+            border: 1px solid rgba(30, 215, 96, 0.2);
+            border-radius: 12px;
+            margin-top: 0.5rem;
         }
         
-        .privacy-highlight p {
-            margin: 0 !important;
+        .contact-response svg {
+            width: 20px;
+            height: 20px;
+            color: var(--color-primary);
+            flex-shrink: 0;
+        }
+        
+        .contact-response p {
+            font-size: 0.875rem;
+            color: var(--color-text-secondary);
+        }
+        
+        .contact-response strong {
             color: var(--color-text-primary);
         }
         
-        /* Footer */
+        /* Footer - Match home page external CSS */
         .footer {
-            background: rgba(0, 0, 0, 0.4);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 3rem 0 1.5rem;
+            background: var(--color-bg-card);
+            border-top: 1px solid #282828;
+            padding: 4rem 0 2rem;
+            margin-top: 4rem;
         }
         
         .footer__grid {
             display: grid;
-            grid-template-columns: 2fr repeat(3, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
         
-        .footer__brand { max-width: 300px; }
+        .footer__brand {
+            max-width: 320px;
+        }
         
         .footer__logo {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 0.75rem;
-            text-decoration: none;
+            gap: 0.5rem;
             margin-bottom: 1rem;
+            transition: opacity 150ms ease;
         }
         
-        .footer__logo-icon { width: 40px; height: 40px; }
-        .footer__logo-text { font-size: 1.25rem; font-weight: 700; color: var(--color-primary); }
+        .footer__logo:hover {
+            opacity: 0.8;
+        }
+        
+        .footer__logo-icon {
+            flex-shrink: 0;
+        }
+        
+        .footer__logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+        }
         
         .footer__description {
-            font-size: 0.875rem;
             color: var(--color-text-secondary);
-            line-height: 1.6;
-            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
         }
         
-        .footer__social { display: flex; gap: 0.75rem; }
+        .footer__social {
+            display: flex;
+            gap: 0.5rem;
+        }
         
         .footer__social-link {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 36px;
-            height: 36px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            background: var(--color-bg-elevated);
+            border-radius: 9999px;
             color: var(--color-text-secondary);
-            transition: all 0.2s ease;
+            transition: all 150ms ease;
         }
         
-        .footer__social-link:hover { background: var(--color-primary); color: #000; }
+        .footer__social-link:hover {
+            background: var(--color-primary);
+            color: var(--color-bg-dark);
+            transform: translateY(-2px);
+        }
+        
+        .footer__column {
+            display: flex;
+            flex-direction: column;
+        }
         
         .footer__heading {
-            font-size: 0.875rem;
+            font-size: 1rem;
             font-weight: 600;
             color: var(--color-text-primary);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
             margin-bottom: 1rem;
         }
         
-        .footer__links { list-style: none; }
-        
-        .footer__link {
-            display: block;
-            padding: 0.375rem 0;
-            color: var(--color-text-secondary);
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.2s;
+        .footer__links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
         }
         
-        .footer__link:hover { color: var(--color-primary); }
+        .footer__link {
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+            transition: color 150ms ease;
+            text-decoration: none;
+        }
+        
+        .footer__link:hover {
+            color: var(--color-primary);
+        }
         
         .footer__bottom {
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            border-top: 1px solid #282828;
             text-align: center;
         }
         
-        .footer__copyright, .footer__disclaimer {
-            font-size: 0.8125rem;
+        .footer__copyright {
             color: var(--color-text-secondary);
-            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
         }
         
-        /* Tablet Responsive */
+        .footer__disclaimer {
+            color: #9A9A9A;
+            font-size: 0.75rem;
+        }
+        
+        /* Mobile */
         @media (max-width: 1023px) {
-            /* Mobile Navigation - Right Side Drawer */
             .nav {
                 position: fixed;
                 top: 0;
@@ -453,69 +583,37 @@
                 overflow-y: auto;
                 z-index: 99999;
                 box-shadow: -4px 0 24px rgba(0, 0, 0, 0.5);
-                will-change: transform;
             }
             
-            .nav.is-open {
+            .nav.active {
                 transform: translateX(0);
                 visibility: visible;
             }
             
             .nav__list {
-                display: flex;
                 flex-direction: column;
-                gap: 0.5rem;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-            
-            .nav__item {
-                display: block;
-                width: 100%;
+                gap: 0;
             }
             
             .nav__link {
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                width: 100%;
                 padding: 1rem 1.25rem;
-                font-size: 1.125rem;
-                font-weight: 500;
-                color: #B3B3B3;
-                text-decoration: none;
+                font-size: 1rem;
                 border-radius: 8px;
-                min-height: 52px;
-                background: transparent;
-            }
-            
-            .nav__link:hover,
-            .nav__link:focus,
-            .nav__link--active {
-                color: #FFFFFF;
-                background: rgba(255, 255, 255, 0.1);
             }
             
             .nav-toggle {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
                 gap: 5px;
-                width: 48px;
-                height: 48px;
-                background: none;
+                width: 44px;
+                height: 44px;
+                background: transparent;
                 border: none;
                 cursor: pointer;
-                padding: 12px;
-                border-radius: 8px;
-                transition: background 0.2s ease;
-            }
-            
-            .nav-toggle:hover,
-            .nav-toggle:focus {
-                background: rgba(255, 255, 255, 0.1);
+                padding: 10px;
+                z-index: 100001;
+                position: relative;
             }
             
             .nav-toggle__bar {
@@ -523,80 +621,124 @@
                 height: 2px;
                 background: var(--color-text-primary);
                 border-radius: 2px;
-                transition: transform 0.3s ease, opacity 0.3s ease;
+                transition: all 0.3s ease;
             }
             
-            .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(1) {
-                transform: translateY(7px) rotate(45deg);
+            .nav-toggle.active .nav-toggle__bar:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
             }
             
-            .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(2) {
+            .nav-toggle.active .nav-toggle__bar:nth-child(2) {
                 opacity: 0;
             }
             
-            .nav-toggle[aria-expanded="true"] .nav-toggle__bar:nth-child(3) {
-                transform: translateY(-7px) rotate(-45deg);
+            .nav-toggle.active .nav-toggle__bar:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
             }
             
-            /* Nav Overlay - Backdrop for closing drawer */
             .nav-overlay {
-                display: block;
                 position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-                height: 100vh;
-                height: 100dvh;
-                background: rgba(0, 0, 0, 0.6);
+                inset: 0;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 99998;
                 opacity: 0;
                 visibility: hidden;
                 transition: opacity 0.3s ease, visibility 0.3s ease;
-                z-index: 99998;
-                cursor: pointer;
-                -webkit-tap-highlight-color: transparent;
-                -webkit-touch-callout: none;
-                -webkit-user-select: none;
-                user-select: none;
             }
             
-            .nav-overlay.is-visible,
-            body.nav-open .nav-overlay {
+            .nav-overlay.active {
                 opacity: 1;
                 visibility: visible;
             }
             
-            /* Prevent body scroll when nav is open */
+            /* Prevent scroll when navbar is open */
             body.nav-open {
-                overflow: hidden;
-                position: fixed;
-                width: 100%;
-                height: 100%;
-                touch-action: none;
+                overflow: hidden !important;
+                position: fixed !important;
+                width: 100% !important;
+                height: 100% !important;
+                touch-action: none !important;
             }
             
-            .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem 1.5rem; }
-            .footer__brand { grid-column: 1 / -1; max-width: 100%; }
+            html.nav-open {
+                overflow: hidden !important;
+            }
+
+            .contact-grid { grid-template-columns: 1fr; }
+            
+            /* Footer Responsive - Tablet */
+            .footer__grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+            
+            .footer__brand {
+                grid-column: span 2;
+                max-width: 100%;
+                text-align: center;
+            }
+            
+            .footer__logo {
+                justify-content: center;
+            }
+            
+            .footer__social {
+                justify-content: center;
+            }
+            
+            .footer__column {
+                align-items: center;
+                text-align: center;
+            }
+            
+            .footer__links {
+                align-items: center;
+            }
         }
         
         @media (max-width: 640px) {
-            .privacy-hero { padding: 120px 0 40px; }
-            .privacy-hero__icon { width: 64px; height: 64px; border-radius: 16px; }
-            .privacy-hero__icon svg { width: 32px; height: 32px; }
-            .privacy-hero__title { font-size: 1.875rem; }
+            .contact-hero { padding: 120px 0 40px; }
+            .contact-hero__icon { width: 64px; height: 64px; border-radius: 16px; }
+            .contact-hero__icon svg { width: 32px; height: 32px; }
+            .contact-hero__title { font-size: 1.875rem; }
+            .contact-hero__desc { font-size: 1rem; }
             
-            .privacy-card { padding: 1.5rem; border-radius: 12px; }
-            .privacy-card__header { flex-direction: column; gap: 0.75rem; }
-            .privacy-card__icon { width: 44px; height: 44px; }
-            .privacy-card__title { font-size: 1.25rem; }
+            .contact-card { padding: 1.5rem; border-radius: 12px; }
+            .contact-card__header { flex-direction: column; gap: 0.75rem; }
+            .contact-card__icon { width: 44px; height: 44px; }
+            .contact-card__title { font-size: 1.25rem; }
             
-            .footer__grid { grid-template-columns: 1fr; text-align: center; }
-            .footer__social { justify-content: center; }
+            .contact-info__item { padding: 1rem; }
+            .contact-info__icon { width: 40px; height: 40px; }
+            
+            /* Footer Responsive - Mobile */
+            .footer {
+                padding: 3rem 0 1.5rem;
+                padding-bottom: 100px; /* Space for sticky download bar */
+            }
+            
+            .footer__grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer__brand {
+                grid-column: span 1;
+            }
+            
+            .footer__column {
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #282828;
+            }
+            
+            .footer__column:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
         }
     </style>
 </head>
-<body itemscope itemtype="https://schema.org/WebPage">
+<body>
     <!-- Skip Links for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <a href="#primary-nav" class="skip-link">Skip to navigation</a>
@@ -604,7 +746,7 @@
     <header class="header" role="banner" aria-label="Site header">
         <div class="container">
             <div class="header__inner">
-                <a href="../" class="logo" aria-label="Spotify Mod APK - Return to Homepage">
+                <a href="../" class="logo" aria-label="Spotify Mod APK - Return to Homepage" itemprop="url">
                     <svg class="logo__icon" width="40" height="40" viewBox="0 0 168 168" aria-hidden="true" role="img">
                         <circle cx="84" cy="84" r="84" fill="#1DB954"/>
                         <path d="M117.8 117.8c-1.4 2.3-4.4 3-6.7 1.6-18.4-11.2-41.5-13.8-68.7-7.5-2.6.6-5.3-.9-5.9-3.5-.6-2.6.9-5.3 3.5-5.9 29.8-6.8 55.4-3.9 76.2 8.7 2.3 1.3 3 4.3 1.6 6.6zm10.3-21.8c-1.8 2.9-5.6 3.8-8.5 2-21.1-13-53.3-16.8-78.3-9.2-3.2 1-6.6-0.8-7.6-4-1-3.2.8-6.6 4-7.6 28.5-8.6 64-4.5 88.4 10.5 2.9 1.8 3.8 5.5 2 8.3zm0.9-22.7c-25.3-15-67-16.4-91.2-9.1-3.9 1.2-8-1-9.2-4.9-1.2-3.9 1-8 4.9-9.2 27.7-8.4 73.8-6.8 102.9 10.5 3.5 2.1 4.6 6.6 2.5 10.1-2.1 3.4-6.6 4.6-10 2.6z" fill="#191414"/>
@@ -628,210 +770,136 @@
                         <li class="nav__item"><a href="../mac/" class="nav__link">Mac</a></li>
                         <li class="nav__item"><a href="../windows/" class="nav__link">Windows</a></li>
                         <li class="nav__item"><a href="../blogs/" class="nav__link">Blogs</a></li>
-                        <li class="nav__item"><a href="../contact/" class="nav__link">Contact Us</a></li>
+                        <li class="nav__item"><a href="./" class="nav__link nav__link--active" aria-current="page">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
     
-    <main>
+    <main id="main-content" role="main" aria-label="Main content">
         <!-- Hero -->
-        <section class="privacy-hero">
+        <section class="contact-hero">
             <div class="container">
-                <div class="privacy-hero__icon">
+                <div class="contact-hero__icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
                     </svg>
                 </div>
-                <h1 class="privacy-hero__title">Privacy <span>Policy</span></h1>
-                <div class="privacy-hero__updated">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <polyline points="12,6 12,12 16,14"/>
-                    </svg>
-                    Last Updated: February 1, 2026
-                </div>
+                <h1 class="contact-hero__title">Contact <span>Us</span></h1>
+                <p class="contact-hero__desc">Have questions, feedback, or need support? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
             </div>
         </section>
         
         <!-- Content -->
-        <section class="privacy-section">
+        <section class="contact-section">
             <div class="container">
-                <div class="privacy-grid">
+                <div class="contact-grid">
                     
-                    <!-- Introduction -->
-                    <article class="privacy-card">
-                        <div class="privacy-card__header">
-                            <div class="privacy-card__icon">
+                    <!-- Contact Form Card -->
+                    <article class="contact-card">
+                        <div class="contact-card__header">
+                            <div class="contact-card__icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                </svg>
+                            </div>
+                            <h2 class="contact-card__title">Send Us a Message</h2>
+                        </div>
+                        
+                        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+                            <p class="visually-hidden" aria-hidden="true">
+                                <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                            </p>
+                            
+                            <div class="contact-form__group">
+                                <label for="name" class="contact-form__label">Your Name</label>
+                                <input type="text" id="name" name="name" class="contact-form__input" placeholder="John Doe" required>
+                            </div>
+                            
+                            <div class="contact-form__group">
+                                <label for="email" class="contact-form__label">Email Address</label>
+                                <input type="email" id="email" name="email" class="contact-form__input" placeholder="john@example.com" required>
+                            </div>
+                            
+                            <div class="contact-form__group">
+                                <label for="subject" class="contact-form__label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="contact-form__input" placeholder="How can we help?">
+                            </div>
+                            
+                            <div class="contact-form__group">
+                                <label for="message" class="contact-form__label">Message</label>
+                                <textarea id="message" name="message" class="contact-form__textarea" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="contact-form__submit">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                                </svg>
+                                Send Message
+                            </button>
+                        </form>
+                    </article>
+                    
+                    <!-- Contact Info Card -->
+                    <article class="contact-card">
+                        <div class="contact-card__header">
+                            <div class="contact-card__icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"/>
                                     <line x1="12" y1="16" x2="12" y2="12"/>
                                     <line x1="12" y1="8" x2="12.01" y2="8"/>
                                 </svg>
                             </div>
-                            <h2 class="privacy-card__title">Introduction</h2>
+                            <h2 class="contact-card__title">Get in Touch</h2>
                         </div>
-                        <div class="privacy-card__content">
-                            <p>Welcome to Spotify Mod APK ("we," "our," or "us"). We are committed to protecting your privacy and ensuring you have a positive experience on our website.</p>
-                            <p>This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit <strong>spotifymod.com</strong>.</p>
-                            <div class="privacy-highlight">
-                                <p>By accessing or using our website, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.</p>
+                        
+                        <div class="contact-info">
+                            <div class="contact-info__item">
+                                <div class="contact-info__icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info__content">
+                                    <span class="contact-info__label">Email</span>
+                                    <span class="contact-info__value"><a href="mailto:support@spotifymod.com">support@spotifymod.com</a></span>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Information Collection -->
-                    <article class="privacy-card">
-                        <div class="privacy-card__header">
-                            <div class="privacy-card__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                    <polyline points="14,2 14,8 20,8"/>
-                                    <line x1="16" y1="13" x2="8" y2="13"/>
-                                    <line x1="16" y1="17" x2="8" y2="17"/>
-                                    <polyline points="10,9 9,9 8,9"/>
-                                </svg>
-                            </div>
-                            <h2 class="privacy-card__title">Information Collection</h2>
-                        </div>
-                        <div class="privacy-card__content">
-                            <p>We may collect information about you in various ways when you visit our website:</p>
                             
-                            <p><strong>Log Data</strong></p>
-                            <p>When you visit our website, our servers may automatically log standard data provided by your web browser:</p>
-                            <ul>
-                                <li>Your device's Internet Protocol (IP) address</li>
-                                <li>Browser type and version</li>
-                                <li>Pages you visit on our site</li>
-                                <li>Time and date of your visit</li>
-                                <li>Time spent on each page</li>
-                                <li>Referring website addresses</li>
-                            </ul>
+                            <div class="contact-info__item">
+                                <div class="contact-info__icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info__content">
+                                    <span class="contact-info__label">Telegram</span>
+                                    <span class="contact-info__value"><a href="https://t.me/spotifymod" target="_blank" rel="noopener noreferrer">@spotifymod</a></span>
+                                </div>
+                            </div>
                             
-                            <p><strong>Cookies</strong></p>
-                            <p>We use "cookies" and similar tracking technologies to improve our services. You can instruct your browser to refuse all cookies, but some features may not function properly.</p>
-                            <ul>
-                                <li><strong>Essential Cookies:</strong> Required for the website to function</li>
-                                <li><strong>Analytics Cookies:</strong> Help us understand visitor behavior</li>
-                                <li><strong>Preference Cookies:</strong> Remember your settings</li>
-                            </ul>
-                        </div>
-                    </article>
-                    
-                    <!-- How We Use Information -->
-                    <article class="privacy-card">
-                        <div class="privacy-card__header">
-                            <div class="privacy-card__icon">
+                            <div class="contact-info__item">
+                                <div class="contact-info__icon">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                    </svg>
+                                </div>
+                                <div class="contact-info__content">
+                                    <span class="contact-info__label">Twitter / X</span>
+                                    <span class="contact-info__value"><a href="https://twitter.com/spotifymod" target="_blank" rel="noopener noreferrer">@spotifymod</a></span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-response">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/>
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12,6 12,12 16,14"/>
                                 </svg>
+                                <p><strong>Response Time:</strong> We typically respond within 24-48 hours during business days.</p>
                             </div>
-                            <h2 class="privacy-card__title">How We Use Your Information</h2>
-                        </div>
-                        <div class="privacy-card__content">
-                            <p>We use the information we collect for various purposes:</p>
-                            <ul>
-                                <li>To provide, operate, and maintain our website</li>
-                                <li>To improve, personalize, and expand our website</li>
-                                <li>To understand and analyze how you use our website</li>
-                                <li>To develop new products, services, and features</li>
-                                <li>To communicate with you for customer support</li>
-                                <li>To find and prevent fraud and security issues</li>
-                            </ul>
-                        </div>
-                    </article>
-                    
-                    <!-- Security -->
-                    <article class="privacy-card">
-                        <div class="privacy-card__header">
-                            <div class="privacy-card__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                </svg>
-                            </div>
-                            <h2 class="privacy-card__title">Security</h2>
-                        </div>
-                        <div class="privacy-card__content">
-                            <p>The security of your personal information is important to us. We implement appropriate technical and organizational measures to protect your data:</p>
-                            <ul>
-                                <li><strong>SSL/TLS Encryption:</strong> All data transmitted between your browser and our servers is encrypted</li>
-                                <li><strong>Secure Hosting:</strong> Our website is hosted on secure servers with industry-standard protection</li>
-                                <li><strong>Regular Updates:</strong> We continuously update our security practices to address new threats</li>
-                            </ul>
-                            <div class="privacy-highlight">
-                                <p>While we strive to protect your personal information, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security.</p>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Third-Party Links -->
-                    <article class="privacy-card">
-                        <div class="privacy-card__header">
-                            <div class="privacy-card__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                    <polyline points="15,3 21,3 21,9"/>
-                                    <line x1="10" y1="14" x2="21" y2="3"/>
-                                </svg>
-                            </div>
-                            <h2 class="privacy-card__title">Links to Other Sites</h2>
-                        </div>
-                        <div class="privacy-card__content">
-                            <p>Our website may contain links to other sites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site.</p>
-                            <p>We strongly advise you to review the Privacy Policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
-                        </div>
-                    </article>
-                    
-                    <!-- Children's Privacy -->
-                    <article class="privacy-card">
-                        <div class="privacy-card__header">
-                            <div class="privacy-card__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="12" cy="7" r="4"/>
-                                </svg>
-                            </div>
-                            <h2 class="privacy-card__title">Children's Privacy</h2>
-                        </div>
-                        <div class="privacy-card__content">
-                            <p>Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
-                            <p>If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so we can take necessary actions.</p>
-                        </div>
-                    </article>
-                    
-                    <!-- Changes to Policy -->
-                    <article class="privacy-card">
-                        <div class="privacy-card__header">
-                            <div class="privacy-card__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-                                </svg>
-                            </div>
-                            <h2 class="privacy-card__title">Changes to This Policy</h2>
-                        </div>
-                        <div class="privacy-card__content">
-                            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
-                            <p>You are advised to review this Privacy Policy periodically for any changes. Changes are effective when they are posted on this page.</p>
-                        </div>
-                    </article>
-                    
-                    <!-- Contact -->
-                    <article class="privacy-card">
-                        <div class="privacy-card__header">
-                            <div class="privacy-card__icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
-                                </svg>
-                            </div>
-                            <h2 class="privacy-card__title">Contact Us</h2>
-                        </div>
-                        <div class="privacy-card__content">
-                            <p>If you have any questions about this Privacy Policy, please reach out to us through our contact page.</p>
-                            <a href="../contact/" class="privacy-contact-btn">Contact Us</a>
                         </div>
                     </article>
                     
@@ -840,7 +908,6 @@
         </section>
     </main>
     
-    <!-- Footer -->
     <footer class="footer" role="contentinfo" aria-label="Site footer" itemscope itemtype="https://schema.org/WPFooter">
         <div class="container">
             <div class="footer__grid">

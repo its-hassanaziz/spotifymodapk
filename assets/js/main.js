@@ -21,12 +21,18 @@
         const openNav = () => {
             // Save scroll position before locking
             scrollPosition = window.pageYOffset;
-            document.body.style.top = `-${scrollPosition}px`;
             
             navToggle.setAttribute('aria-expanded', 'true');
             nav.classList.add('is-open');
             if (navOverlay) navOverlay.classList.add('is-visible');
             document.body.classList.add('nav-open');
+            document.documentElement.classList.add('nav-open');
+            
+            // Prevent scrolling and hide content
+            document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
+            document.body.style.top = `-${scrollPosition}px`;
         };
         
         // Close nav function
@@ -35,8 +41,12 @@
             nav.classList.remove('is-open');
             if (navOverlay) navOverlay.classList.remove('is-visible');
             document.body.classList.remove('nav-open');
+            document.documentElement.classList.remove('nav-open');
             
-            // Restore scroll position after unlocking
+            // Restore scrolling and content visibility
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
             document.body.style.top = '';
             window.scrollTo(0, scrollPosition);
         };
