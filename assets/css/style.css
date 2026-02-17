@@ -1821,9 +1821,26 @@ p {
 
     .site-footer__brand {
         grid-column: auto;
+        text-align: center;
+    }
+
+    .site-footer__logo {
+        justify-content: center;
+    }
+
+    .site-footer__desc {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 400px;
+    }
+
+    .site-footer__social {
+        justify-content: center;
     }
 
     .site-footer__nav {
+        align-items: center;
+        text-align: center;
         padding-bottom: 24px;
         border-bottom: 1px solid #2a2a2a;
     }
@@ -1831,6 +1848,10 @@ p {
     .site-footer__nav:last-child {
         border-bottom: none;
         padding-bottom: 0;
+    }
+
+    .site-footer__list {
+        align-items: center;
     }
 
     .site-footer__bottom {
@@ -2015,7 +2036,27 @@ p {
         border-bottom: none;
         padding-bottom: 0;
     }
-}
+
+    .footer__column {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__links {
+        align-items: center;
+    }
+
+    .footer__brand {
+        text-align: center;
+    }
+
+    .footer__logo {
+        justify-content: center;
+    }
+
+    .footer__social {
+        justify-content: center;
+    }
 }
 
 /* ================================================================
@@ -2024,6 +2065,7 @@ p {
 @media print {
     .header,
     .footer,
+    .site-footer,
     .nav-toggle,
     .btn,
     .cta,
