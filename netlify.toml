@@ -17,16 +17,13 @@
   minify = false
 
 [build.processing.html]
-  pretty_urls = true
+  pretty_urls = false
 
 [build.processing.images]
   compress = false
 
-# Custom 404 page
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
+# Custom 404 page - handled by Netlify's built-in 404.html detection
+# Note: Do NOT use catch-all redirect here as it conflicts with _redirects file
 
 # Headers for caching and security
 [[headers]]
