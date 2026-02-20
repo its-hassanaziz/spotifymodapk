@@ -1,6 +1,6 @@
 # Robots.txt for Spotify Mod APK
 # https://spotifymod.com/robots.txt
-# Last updated: February 2026
+# Last updated: February 20, 2026
 
 # Allow all crawlers
 User-agent: *
