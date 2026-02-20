@@ -64,13 +64,13 @@
     "screenshots": [
         {
             "src": "/assets/images/s1.webp",
-            "sizes": "360x780",
+            "sizes": "497x860",
             "type": "image/webp",
             "label": "Spotify Premium Mod Music Player Interface"
         },
         {
             "src": "/assets/images/s2.webp",
-            "sizes": "360x780",
+            "sizes": "497x860",
             "type": "image/webp",
             "label": "Spotify Premium Mod Playlist Library"
         }
