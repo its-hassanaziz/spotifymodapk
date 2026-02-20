@@ -1771,6 +1771,16 @@ p {
     margin: 0 0 6px;
 }
 
+.site-footer__tagline {
+    color: #666;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.site-footer__heart {
+    color: #1DB954;
+}
+
 .site-footer__legal {
     color: #B3B3B3;
     font-size: 0.75rem;
