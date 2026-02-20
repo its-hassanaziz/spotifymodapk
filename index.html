@@ -71,8 +71,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    <!-- Manifest icons: placeholder PNGs generated at /assets/images/icon-{72..512}x{72..512}.png.
-         Replace these with your actual branded icons when ready. -->
+    <!-- IMPORTANT: The manifest.json references icon files that MUST exist at these paths:
+         /assets/images/icon-72x72.png
+         /assets/images/icon-96x96.png
+         /assets/images/icon-128x128.png
+         /assets/images/icon-144x144.png  ← Currently 404! Place a 144×144px PNG here.
+         /assets/images/icon-152x152.png
+         /assets/images/icon-192x192.png
+         /assets/images/icon-384x384.png
+         /assets/images/icon-512x512.png
+         If any file is missing, the browser logs a 404 console error, failing Best Practices. -->
     
     <!-- Preload Critical Resources -->
     <link rel="preload" href="/assets/images/s1.webp" as="image" type="image/webp">
@@ -562,13 +570,13 @@
             border-radius: 50%;
             color: var(--color-text-secondary);
             cursor: pointer;
-            transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+            transition: all 0.2s ease;
         }
         
         .share-modal__close:hover {
-            background-color: rgba(255, 255, 255, .12);
-            opacity: 0.85;
-            transform: scale(1.05);
+            background: rgba(255, 255, 255, .12);
+            border-color: rgba(255, 255, 255, .2);
+            color: var(--color-text-primary);
         }
         
         .share-modal__grid {
@@ -592,13 +600,13 @@
             font-weight: 600;
             font-family: inherit;
             cursor: pointer;
-            transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+            transition: all 0.2s ease;
         }
         
         .share-modal__btn:hover {
-            background-color: #1a1a1a;
-            opacity: 0.92;
-            transform: scale(1.02);
+            background: #1a1a1a;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 20px rgba(29, 185, 84, 0.2);
         }
         
         .share-modal__btn:active {
@@ -1527,7 +1535,7 @@
             border-radius: 6px;
             color: var(--color-text-primary);
             text-decoration: none;
-            transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+            transition: transform 0.2s ease, opacity 0.2s ease;
             font-size: 0.9rem;
             font-weight: 500;
         }
@@ -3212,13 +3220,13 @@
                             <!-- Image Slider -->
                             <div class="phone-slider" role="region" aria-label="Spotify Premium Screenshots" aria-roledescription="carousel">
                                 <div class="phone-slider__track">
-                                    <img src="assets/images/s1.webp" srcset="assets/images/s1.webp 497w" sizes="(max-width: 639px) 85vw, 497px" alt="Ad-free music player showing the currently playing song" class="phone-slider__slide phone-slider__slide--active" loading="eager" fetchpriority="high" width="497" height="860">
-                                    <img src="assets/images/s2.webp" srcset="assets/images/s2.webp 497w" sizes="(max-width: 639px) 85vw, 497px" alt="Personal playlist library with offline download indicators" class="phone-slider__slide" loading="lazy" width="497" height="860">
-                                    <img src="assets/images/s3.webp" srcset="assets/images/s3.webp 497w" sizes="(max-width: 639px) 85vw, 497px" alt="Now playing screen with 320kbps audio quality controls" class="phone-slider__slide" loading="lazy" width="497" height="860">
-                                    <img src="assets/images/s4.webp" srcset="assets/images/s4.webp 497w" sizes="(max-width: 639px) 85vw, 497px" alt="Music discovery and search with personalized recommendations" class="phone-slider__slide" loading="lazy" width="497" height="860">
-                                    <img src="assets/images/s5.webp" srcset="assets/images/s5.webp 497w" sizes="(max-width: 639px) 85vw, 497px" alt="Album view with full track listing and save options" class="phone-slider__slide" loading="lazy" width="497" height="860">
-                                    <img src="assets/images/s6.webp" srcset="assets/images/s6.webp 497w" sizes="(max-width: 639px) 85vw, 497px" alt="Artist profile page with discography and related artists" class="phone-slider__slide" loading="lazy" width="497" height="860">
-                                    <img src="assets/images/s7.webp" srcset="assets/images/s7.webp 497w" sizes="(max-width: 639px) 85vw, 497px" alt="Settings panel showing premium audio and playback options" class="phone-slider__slide" loading="lazy" width="497" height="860">
+                                    <img src="assets/images/s1.webp" srcset="assets/images/s1.webp 490w" sizes="(max-width: 639px) 85vw, 490px" alt="Ad-free music player showing the currently playing song" class="phone-slider__slide phone-slider__slide--active" loading="eager" fetchpriority="high" width="490" height="860">
+                                    <img src="assets/images/s2.webp" srcset="assets/images/s2.webp 490w" sizes="(max-width: 639px) 85vw, 490px" alt="Personal playlist library with offline download indicators" class="phone-slider__slide" loading="lazy" width="490" height="860">
+                                    <img src="assets/images/s3.webp" srcset="assets/images/s3.webp 490w" sizes="(max-width: 639px) 85vw, 490px" alt="Now playing screen with 320kbps audio quality controls" class="phone-slider__slide" loading="lazy" width="490" height="860">
+                                    <img src="assets/images/s4.webp" srcset="assets/images/s4.webp 490w" sizes="(max-width: 639px) 85vw, 490px" alt="Music discovery and search with personalized recommendations" class="phone-slider__slide" loading="lazy" width="490" height="860">
+                                    <img src="assets/images/s5.webp" srcset="assets/images/s5.webp 490w" sizes="(max-width: 639px) 85vw, 490px" alt="Album view with full track listing and save options" class="phone-slider__slide" loading="lazy" width="490" height="860">
+                                    <img src="assets/images/s6.webp" srcset="assets/images/s6.webp 490w" sizes="(max-width: 639px) 85vw, 490px" alt="Artist profile page with discography and related artists" class="phone-slider__slide" loading="lazy" width="490" height="860">
+                                    <img src="assets/images/s7.webp" srcset="assets/images/s7.webp 490w" sizes="(max-width: 639px) 85vw, 490px" alt="Settings panel showing premium audio and playback options" class="phone-slider__slide" loading="lazy" width="490" height="860">
                                 </div>
                                 <!-- Navigation Dots -->
                                 <div class="phone-slider__dots" role="tablist" aria-label="Slide navigation">
