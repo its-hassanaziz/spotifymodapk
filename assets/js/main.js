@@ -282,13 +282,24 @@
     };
 
     // ================================================================
-    // CURRENT YEAR FOR FOOTER
+    // CURRENT YEAR FOR FOOTER (auto-updates across all pages)
     // ================================================================
     const updateCopyrightYear = () => {
-        const yearElements = document.querySelectorAll('[data-year]');
         const currentYear = new Date().getFullYear();
-        
-        yearElements.forEach(el => {
+
+        // Pages with <time> inside .site-footer__copy
+        document.querySelectorAll('.site-footer__copy time').forEach(el => {
+            el.textContent = currentYear;
+            el.setAttribute('datetime', currentYear);
+        });
+
+        // Pages with .footer__copyright (windows, mac, ios, blogs)
+        document.querySelectorAll('.footer__copyright').forEach(el => {
+            el.innerHTML = el.innerHTML.replace(/©\s*\d{4}/, '© ' + currentYear);
+        });
+
+        // Generic [data-year] elements anywhere on the page
+        document.querySelectorAll('[data-year]').forEach(el => {
             el.textContent = currentYear;
         });
     };
