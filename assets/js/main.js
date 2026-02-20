@@ -48,7 +48,14 @@
             document.body.style.position = '';
             document.body.style.width = '';
             document.body.style.top = '';
+            
+            // Use instant scroll to prevent smooth-scroll animation
+            // when restoring position (not user-initiated scrolling)
+            document.documentElement.style.scrollBehavior = 'auto';
             window.scrollTo(0, scrollPosition);
+            requestAnimationFrame(() => {
+                document.documentElement.style.scrollBehavior = '';
+            });
         };
         
         // Toggle button click
