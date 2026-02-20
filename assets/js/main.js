@@ -305,6 +305,31 @@
     };
 
     // ================================================================
+    // BLOG DATES - Auto-update blog card dates to current date
+    // ================================================================
+    const updateBlogDates = () => {
+        const today = new Date();
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const month = months[today.getMonth()];
+        const day = String(today.getDate()).padStart(2, '0');
+        const year = today.getFullYear();
+        
+        // Format: "Jan 15, 2026" and datetime: "2026-01-15"
+        const displayDate = month + ' ' + day + ', ' + year;
+        const dateTimeAttr = year + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
+
+        // Update all blog card dates (works for both span and time elements)
+        document.querySelectorAll('.blog-card__date').forEach(el => {
+            el.textContent = displayDate;
+            
+            // Update datetime attribute if present (for time elements)
+            if (el.hasAttribute('datetime')) {
+                el.setAttribute('datetime', dateTimeAttr);
+            }
+        });
+    };
+
+    // ================================================================
     // EXTERNAL LINKS - Add rel attributes for security
     // ================================================================
     const secureExternalLinks = () => {
@@ -458,6 +483,7 @@
             initCopyToClipboard();
             setCanonicalUrl();
             updateCopyrightYear();
+            updateBlogDates();
             secureExternalLinks();
             initAnalytics();
         });
