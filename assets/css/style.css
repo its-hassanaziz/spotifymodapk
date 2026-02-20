@@ -760,35 +760,51 @@ p {
 
 .phone-slider__dots {
     position: absolute;
-    bottom: 12px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 6px;
+    gap: 0;
     z-index: 10;
-    padding: 6px 10px;
+    padding: 0;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
 }
 
 .phone-slider__dot {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.phone-slider__dot::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    border: none;
     background: rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    padding: 0;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.phone-slider__dot:hover {
-    background: rgba(255, 255, 255, 0.7);
+.phone-slider__dot:hover::before {
+    opacity: 0.85;
+    transform: translate(-50%, -50%) scale(1.15);
 }
 
-.phone-slider__dot--active {
+.phone-slider__dot--active::before {
     background: var(--color-primary);
-    transform: scale(1.2);
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
 .hero__bg {
@@ -796,6 +812,8 @@ p {
     inset: 0;
     background: radial-gradient(ellipse at 30% 0%, rgba(29, 185, 84, 0.15) 0%, transparent 70%);
     pointer-events: none;
+    contain: strict;
+    will-change: transform;
 }
 
 /* ----------------------------------------------------------------
@@ -1754,7 +1772,7 @@ p {
 }
 
 .site-footer__legal {
-    color: #666;
+    color: #9e9e9e;
     font-size: 0.75rem;
     margin: 0;
 }
