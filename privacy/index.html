@@ -23,6 +23,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
     
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css?v=2.0">
+    
     <style>
         :root {
             --color-primary: #1DB954;
@@ -39,9 +42,12 @@
             margin: 0;
             padding: 0;
             -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
         }
         
-        html { scroll-behavior: smooth; }
+        html {
+            overflow-x: hidden;
+        }
         
         body {
             font-family: var(--font-family);
@@ -49,6 +55,8 @@
             color: var(--color-text-primary);
             line-height: 1.6;
             min-height: 100vh;
+            overflow-x: hidden;
+            max-width: 100vw;
         }
         
         /* Aura Background */
@@ -572,7 +580,8 @@
                 overflow: hidden;
                 position: fixed;
                 width: 100%;
-                height: 100%;
+                left: 0;
+                right: 0;
                 touch-action: none;
             }
             
@@ -840,165 +849,69 @@
         </section>
     </main>
     
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo" aria-label="Site footer" itemscope itemtype="https://schema.org/WPFooter">
-        <div class="container">
-            <div class="footer__grid">
-                <!-- Brand Column -->
-                <div class="footer__brand">
-                    <a href="../" class="footer__logo" aria-label="Spotify Mod APK - Return to Homepage">
-                        <svg class="footer__logo-icon" width="40" height="40" viewBox="0 0 168 168" aria-hidden="true" role="img">
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer" itemscope itemtype="https://schema.org/WPFooter">
+        <div class="site-footer__inner">
+            <div class="site-footer__top">
+                <div class="site-footer__brand">
+                    <a href="../" class="site-footer__logo" aria-label="Spotify Mod APK - Return to Homepage">
+                        <svg class="site-footer__logo-icon" width="40" height="40" viewBox="0 0 168 168" aria-hidden="true" focusable="false" role="img">
                             <circle cx="84" cy="84" r="84" fill="#1DB954"/>
                             <path d="M117.8 117.8c-1.4 2.3-4.4 3-6.7 1.6-18.4-11.2-41.5-13.8-68.7-7.5-2.6.6-5.3-.9-5.9-3.5-.6-2.6.9-5.3 3.5-5.9 29.8-6.8 55.4-3.9 76.2 8.7 2.3 1.3 3 4.3 1.6 6.6zm10.3-21.8c-1.8 2.9-5.6 3.8-8.5 2-21.1-13-53.3-16.8-78.3-9.2-3.2 1-6.6-0.8-7.6-4-1-3.2.8-6.6 4-7.6 28.5-8.6 64-4.5 88.4 10.5 2.9 1.8 3.8 5.5 2 8.3zm0.9-22.7c-25.3-15-67-16.4-91.2-9.1-3.9 1.2-8-1-9.2-4.9-1.2-3.9 1-8 4.9-9.2 27.7-8.4 73.8-6.8 102.9 10.5 3.5 2.1 4.6 6.6 2.5 10.1-2.1 3.4-6.6 4.6-10 2.6z" fill="#191414"/>
                         </svg>
-                        <span class="footer__logo-text">Spotify Mod</span>
+                        <span class="site-footer__logo-text">Spotify Mod</span>
                     </a>
-                    <p class="footer__description">Download Spotify Premium Mod APK for free. Enjoy ad-free music, unlimited skips, and offline downloads on Android, iOS, Mac & Windows.</p>
-                    <nav class="footer__social" aria-label="Social media links">
-                        <a href="#" class="footer__social-link" aria-label="Follow us on Twitter (X)" rel="noopener noreferrer external" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
+                    <p class="site-footer__desc">Your trusted source for the latest Spotify Mod. Stream music, podcasts, and audiobooks with every premium feature unlocked — no subscription needed.</p>
+                    <div class="site-footer__social">
+                        <a href="#" class="site-footer__social-link" aria-label="Follow us on X (Twitter)" rel="noopener noreferrer external" target="_blank">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         </a>
-                        <a href="#" class="footer__social-link" aria-label="Follow us on Facebook" rel="noopener noreferrer external" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
+                        <a href="#" class="site-footer__social-link" aria-label="Follow us on Facebook" rel="noopener noreferrer external" target="_blank">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         </a>
-                        <a href="#" class="footer__social-link" aria-label="Follow us on Instagram" rel="noopener noreferrer external" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                            </svg>
+                        <a href="#" class="site-footer__social-link" aria-label="Follow us on Instagram" rel="noopener noreferrer external" target="_blank">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
                         </a>
-                        <a href="#" class="footer__social-link" aria-label="Subscribe on YouTube" rel="noopener noreferrer external" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                            </svg>
+                        <a href="#" class="site-footer__social-link" aria-label="Subscribe on YouTube" rel="noopener noreferrer external" target="_blank">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                         </a>
-                    </nav>
+                    </div>
                 </div>
-                
-                <!-- Quick Links -->
-                <nav class="footer__column" aria-label="Download links">
-                    <h3 class="footer__heading">Downloads</h3>
-                    <ul class="footer__links">
-                        <li><a href="../apk/" class="footer__link">Android APK</a></li>
-                        <li><a href="../ios/" class="footer__link">iOS App</a></li>
-                        <li><a href="../mac/" class="footer__link">Mac App</a></li>
-                        <li><a href="../windows/" class="footer__link">Windows App</a></li>
+                <nav class="site-footer__nav" aria-label="Download links">
+                    <h3 class="site-footer__heading">Downloads</h3>
+                    <ul class="site-footer__list">
+                        <li><a href="../apk/">Android APK</a></li>
+                        <li><a href="../ios/">iOS App</a></li>
+                        <li><a href="../mac/">Mac App</a></li>
+                        <li><a href="../windows/">Windows App</a></li>
                     </ul>
                 </nav>
-                
-                <!-- Resources -->
-                <nav class="footer__column" aria-label="Resources">
-                    <h3 class="footer__heading">Resources</h3>
-                    <ul class="footer__links">
-                        <li><a href="../blogs/" class="footer__link">Blog</a></li>
-                        <li><a href="../blogs/how-to-install/" class="footer__link">Installation Guide</a></li>
-                        <li><a href="../#faq" class="footer__link">FAQ</a></li>
-                        <li><a href="../sitemap.xml" class="footer__link">Sitemap</a></li>
+                <nav class="site-footer__nav" aria-label="Resources">
+                    <h3 class="site-footer__heading">Resources</h3>
+                    <ul class="site-footer__list">
+                        <li><a href="../blogs/">Blog</a></li>
+                        <li><a href="../blogs/how-to-install/">Installation Guide</a></li>
+                        <li><a href="../#faq">FAQ</a></li>
+                        <li><a href="../sitemap.xml">Sitemap</a></li>
                     </ul>
                 </nav>
-                
-                <!-- Legal -->
-                <nav class="footer__column" aria-label="Legal links">
-                    <h3 class="footer__heading">Legal</h3>
-                    <ul class="footer__links">
-                        <li><a href="../privacy/" class="footer__link">Privacy Policy</a></li>
-                        <li><a href="../terms/" class="footer__link">Terms of Service</a></li>
-                        <li><a href="../disclaimer/" class="footer__link">Disclaimer</a></li>
-                        <li><a href="../dmca/" class="footer__link">DMCA</a></li>
+                <nav class="site-footer__nav" aria-label="Legal links">
+                    <h3 class="site-footer__heading">Legal</h3>
+                    <ul class="site-footer__list">
+                        <li><a href="../privacy/">Privacy Policy</a></li>
+                        <li><a href="../terms/">Terms of Service</a></li>
+                        <li><a href="../disclaimer/">Disclaimer</a></li>
+                        <li><a href="../dmca/">DMCA</a></li>
                     </ul>
                 </nav>
             </div>
-            
-            <div class="footer__bottom">
-                <p class="footer__copyright">&copy; <time datetime="2026">2026</time> Spotify Mod APK. All rights reserved.</p>
-                <p class="footer__disclaimer">This site is not affiliated with Spotify AB. Spotify is a registered trademark of Spotify AB.</p>
+            <div class="site-footer__bottom">
+                <p class="site-footer__copy">&copy; <time datetime="2026">2026</time> Spotify Mod APK. All rights reserved.</p>
+                <p class="site-footer__legal">This site is not affiliated with Spotify AB. Spotify is a registered trademark of Spotify AB.</p>
             </div>
         </div>
     </footer>
     
-    <!-- Mobile Navigation Script -->
-    <script>
-    (function() {
-        'use strict';
-        
-        const navToggle = document.querySelector('.nav-toggle');
-        const nav = document.querySelector('.nav');
-        const navOverlay = document.querySelector('.nav-overlay');
-        let scrollPosition = 0;
-        
-        if (!navToggle || !nav) {
-            console.log('Nav elements not found');
-            return;
-        }
-        
-        function closeNav() {
-            nav.classList.remove('is-open');
-            if (navOverlay) navOverlay.classList.remove('is-visible');
-            navToggle.setAttribute('aria-expanded', 'false');
-            
-            // Restore scrolling
-            document.body.classList.remove('nav-open');
-            document.documentElement.classList.remove('nav-open');
-            document.body.style.overflow = '';
-            document.body.style.position = '';
-            document.body.style.width = '';
-            document.body.style.top = '';
-            window.scrollTo(0, scrollPosition);
-        }
-        
-        function openNav() {
-            nav.classList.add('is-open');
-            if (navOverlay) navOverlay.classList.add('is-visible');
-            navToggle.setAttribute('aria-expanded', 'true');
-            
-            // Prevent scrolling
-            scrollPosition = window.pageYOffset;
-            document.body.classList.add('nav-open');
-            document.documentElement.classList.add('nav-open');
-            document.body.style.overflow = 'hidden';
-            document.body.style.position = 'fixed';
-            document.body.style.width = '100%';
-            document.body.style.top = `-${scrollPosition}px`;
-        }
-        
-        function toggleNav(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            if (nav.classList.contains('is-open')) {
-                closeNav();
-            } else {
-                openNav();
-            }
-        }
-        
-        // Toggle button click
-        navToggle.addEventListener('click', toggleNav);
-        navToggle.addEventListener('touchend', function(e) {
-            e.preventDefault();
-            toggleNav(e);
-        });
-        
-        // Overlay click to close
-        if (navOverlay) {
-            navOverlay.addEventListener('click', closeNav);
-        }
-        
-        // Close menu on nav link click
-        nav.querySelectorAll('.nav__link').forEach(function(link) {
-            link.addEventListener('click', closeNav);
-        });
-        
-        // Close menu on Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && nav.classList.contains('is-open')) {
-                closeNav();
-            }
-        });
-    })();
-    </script>
+    <!-- JavaScript - Deferred for performance -->
+    <script src="../assets/js/main.js" defer></script>
 </body>
 </html>
