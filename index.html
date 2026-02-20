@@ -1939,6 +1939,222 @@
         }
         
         /* =============================================
+           FEATURE COMPARISON SECTION
+           ============================================= */
+        .compare {
+            padding: 3.5rem 0;
+        }
+
+        .compare__head {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .compare__title {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--color-text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin: 0 0 0.5rem;
+        }
+
+        .compare__title span {
+            color: var(--color-primary);
+        }
+
+        .compare__sub {
+            color: var(--color-text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        .compare__sub strong {
+            color: var(--color-text-primary);
+        }
+
+        .compare__grid {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr 1fr;
+            gap: 1.25rem;
+            align-items: stretch;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* Individual plan card */
+        .plan {
+            background: var(--color-bg-card);
+            border: 1px solid #282828;
+            border-radius: 14px;
+            padding: 1.5rem 1.25rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .plan--hero {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 24px rgba(29, 185, 84, 0.15);
+            z-index: 1;
+        }
+
+        .plan__badge {
+            position: absolute;
+            top: -11px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--color-primary);
+            color: #000;
+            font-size: 0.65rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 3px 14px;
+            border-radius: 20px;
+        }
+
+        .plan__header {
+            text-align: center;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #282828;
+            margin-bottom: 1rem;
+        }
+
+        .plan__name {
+            font-size: 1.05rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-text-primary);
+            margin: 0 0 0.2rem;
+        }
+
+        .plan--hero .plan__name {
+            color: var(--color-primary);
+        }
+
+        .plan__tag {
+            font-size: 0.75rem;
+            color: var(--color-text-secondary);
+            font-style: italic;
+        }
+
+        /* Feature rows */
+        .plan__features {
+            list-style: none;
+            flex: 1;
+        }
+
+        .plan__row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+        }
+
+        .plan--hero .plan__row {
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .plan__row:last-child {
+            border-bottom: none;
+        }
+
+        .ic {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .ic--yes {
+            color: var(--color-primary);
+        }
+
+        .ic--no {
+            color: #555;
+        }
+
+        .plan__note {
+            font-size: 0.7rem;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* Footer of card */
+        .plan__foot {
+            text-align: center;
+            margin-top: 1.25rem;
+        }
+
+        .plan__price {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--color-text-primary);
+        }
+
+        .plan--hero .plan__price {
+            color: var(--color-primary);
+        }
+
+        .plan__cta {
+            display: inline-block;
+            margin-top: 0.75rem;
+            padding: 0.6rem 1.8rem;
+            background: var(--color-primary);
+            color: #000;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .plan__cta:hover {
+            background: #1ed760;
+            transform: translateY(-1px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .compare {
+                padding: 2.5rem 0;
+            }
+
+            .compare__title {
+                font-size: 1.25rem;
+            }
+
+            .compare__grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                max-width: 380px;
+            }
+
+            /* Re-order: hero card first on mobile */
+            .plan--hero {
+                order: -1;
+            }
+
+            .plan {
+                padding: 1.25rem 1rem 1.5rem;
+            }
+
+            .plan__row {
+                font-size: 0.82rem;
+            }
+        }
+
+        /* =============================================
            SHARE CARD SECTION - Spotify Theme
            ============================================= */
         .share-section {
@@ -2905,7 +3121,7 @@
                                     <path d="M12 16l-6-6h4V4h4v6h4l-6 6z" fill="currentColor"/>
                                     <path d="M20 18H4v2h16v-2z" fill="currentColor"/>
                                 </svg>
-                                Download Latest APK
+                                Download Latest APK v9.1.22
                             </a>
                             <button type="button" id="shareBtn" class="share-btn" aria-label="Share this page">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -3412,6 +3628,85 @@
             </div>
         </section>
         
+        <!-- Feature Comparison Section -->
+        <section class="compare" aria-labelledby="compare-heading">
+            <div class="container">
+                <div class="compare__head">
+                    <h2 id="compare-heading" class="compare__title">Feature Comparison: <span>Free vs. Premium vs. APK</span></h2>
+                    <p class="compare__sub">See how the different versions stack up. The <strong>Spotify Premium Mod APK latest version 2026</strong> combines the best of both worlds.</p>
+                </div>
+                <div class="compare__grid">
+                    <!-- Spotify Free -->
+                    <div class="plan">
+                        <div class="plan__header">
+                            <p class="plan__name">Spotify Free</p>
+                            <span class="plan__tag">The basic, ad-supported experience</span>
+                        </div>
+                        <ul class="plan__features">
+                            <li class="plan__row">Ad-Free Listening <svg class="ic ic--no" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M15 9l-6 6M9 9l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></li>
+                            <li class="plan__row">Unlimited Skips <svg class="ic ic--no" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M15 9l-6 6M9 9l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></li>
+                            <li class="plan__row">Offline Downloads <svg class="ic ic--no" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M15 9l-6 6M9 9l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></li>
+                            <li class="plan__row">High-Quality Audio <svg class="ic ic--no" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M15 9l-6 6M9 9l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></li>
+                            <li class="plan__row">On-Demand Playback <span class="plan__note">Shuffle Only</span></li>
+                            <li class="plan__row">Listen with Friends <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Organize Queue <svg class="ic ic--no" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M15 9l-6 6M9 9l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></li>
+                            <li class="plan__row">Official Support <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Store Security <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                        </ul>
+                        <div class="plan__foot">
+                            <p class="plan__price">Free</p>
+                        </div>
+                    </div>
+
+                    <!-- Spotify Mod APK (hero) -->
+                    <div class="plan plan--hero">
+                        <span class="plan__badge">Recommended</span>
+                        <div class="plan__header">
+                            <p class="plan__name">Spotify Mod APK</p>
+                            <span class="plan__tag">The full premium experience, unlocked.</span>
+                        </div>
+                        <ul class="plan__features">
+                            <li class="plan__row">Ad-Free Listening <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Unlimited Skips <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Offline Downloads <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">High-Quality Audio <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">On-Demand Playback <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Listen with Friends <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Organize Queue <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Official Support <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Store Security <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                        </ul>
+                        <div class="plan__foot">
+                            <p class="plan__price">Free</p>
+                            <a href="apk/" class="plan__cta">Download Spotify APK</a>
+                        </div>
+                    </div>
+
+                    <!-- Spotify Premium -->
+                    <div class="plan">
+                        <div class="plan__header">
+                            <p class="plan__name">Spotify Premium</p>
+                            <span class="plan__tag">The official, paid ad-free experience</span>
+                        </div>
+                        <ul class="plan__features">
+                            <li class="plan__row">Ad-Free Listening <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Unlimited Skips <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Offline Downloads <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">High-Quality Audio <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">On-Demand Playback <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Listen with Friends <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Organize Queue <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Official Support <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                            <li class="plan__row">Store Security <svg class="ic ic--yes" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+                        </ul>
+                        <div class="plan__foot">
+                            <p class="plan__price">Subscription</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Share Section -->
         <section class="share-section" aria-labelledby="share-heading">
             <div class="container">
