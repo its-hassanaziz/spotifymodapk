@@ -417,14 +417,24 @@
     // INITIALIZE ALL MODULES
     // ================================================================
     const init = () => {
-        // Critical functionality
+        // Critical above-the-fold functionality only
         initMobileNav();
-        initSmoothScroll();
         initHeaderScroll();
-        initFaqAccordion();
-        initPhoneSlider();
         
-        // Deferred functionality
+        // Defer non-critical interactive features to reduce TBT
+        const deferInteractive = () => {
+            initSmoothScroll();
+            initFaqAccordion();
+            initPhoneSlider();
+        };
+        
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(deferInteractive, { timeout: 2000 });
+        } else {
+            setTimeout(deferInteractive, 0);
+        }
+        
+        // Lowest-priority deferred functionality
         deferNonCritical(() => {
             initLazyLoad();
             initCopyToClipboard();

@@ -358,12 +358,12 @@ p {
     font-weight: var(--font-weight-medium);
     color: var(--color-text-secondary);
     border-radius: var(--radius-md);
-    transition: color var(--transition-fast), background var(--transition-fast);
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
 .nav__link:hover,
 .nav__link:focus {
-    color: var(--color-text-primary);
+    opacity: 0.85;
     background: var(--color-bg-elevated);
 }
 
