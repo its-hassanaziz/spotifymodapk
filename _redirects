@@ -14,3 +14,5 @@
 /mac             /mac/           301
 /windows         /windows/       301
 /blogs           /blogs/         301
+# Custom 404 - serve 404.html for any unmatched route
+/*               /404.html       404
