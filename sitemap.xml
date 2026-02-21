@@ -33,6 +33,22 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- German Homepage -->
+    <url>
+        <loc>https://spotifymod.com/de/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- German APK Page -->
+    <url>
+        <loc>https://spotifymod.com/de/apk/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- Download Pages -->
     <url>
         <loc>https://spotifymod.com/apk/</loc>
