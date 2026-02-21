@@ -2134,6 +2134,11 @@ p {
     flex-shrink: 0;
 }
 
+.lang-switcher__toggle-flag {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
 .lang-switcher__code {
     font-size: 0.8125rem;
     text-transform: uppercase;

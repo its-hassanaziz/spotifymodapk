@@ -84,6 +84,7 @@
         /* Prevent lang-switcher FOUC */
         .lang-switcher__dropdown{opacity:0;visibility:hidden;position:absolute}
         .lang-switcher{position:relative;display:flex;align-items:center}
+        .nav{display:flex;align-items:center}
         :root {
             --color-primary: #1DB954;
             --color-bg-dark: #121212;
@@ -2267,6 +2268,7 @@
                     <div class="lang-switcher" id="langSwitcher">
                         <button type="button" class="lang-switcher__toggle" aria-expanded="false" aria-haspopup="true" aria-label="Change language">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            <span class="lang-switcher__toggle-flag">🇬🇧</span>
                             <span class="lang-switcher__code">EN</span>
                             <svg class="lang-switcher__arrow" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
                         </button>
@@ -2378,6 +2380,181 @@
                 </svg>
             </a>
         </section>
+
+        <!-- Version History Section -->
+        <section class="details-section" aria-labelledby="version-heading">
+            <div class="container">
+                <div class="details-grid">
+                    <article class="detail-card" id="download">
+                        <div class="detail-card__header">
+                            <div class="detail-card__icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <h2 id="version-heading" class="detail-card__title">Version History &amp; Changelog</h2>
+                        </div>
+                        <p>Stay updated with the latest Spotify Mod APK versions. We regularly update our mod to ensure compatibility and include the newest features.</p>
+                        <div class="table-wrapper">
+                            <table class="detail-card__table">
+                                <thead>
+                                    <tr>
+                                        <th>Version</th>
+                                        <th>Size</th>
+                                        <th>Release Date</th>
+                                        <th>What's New</th>
+                                        <th>Download</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>v8.9.98.488</strong></td>
+                                        <td>70 MB</td>
+                                        <td>Feb 2026</td>
+                                        <td>Latest stable, bug fixes, improved streaming</td>
+                                        <td>
+                                            <button type="button" class="download-btn download-btn--latest" data-version="8.9.98.488" data-url="#" aria-label="Download version 8.9.98.488">
+                                                <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                                                <span class="download-btn__text">Get v8.9.98</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>v8.9.96.476</td>
+                                        <td>68 MB</td>
+                                        <td>Jan 2026</td>
+                                        <td>UI improvements, faster loading</td>
+                                        <td>
+                                            <button type="button" class="download-btn" data-version="8.9.96.476" data-url="#" aria-label="Download version 8.9.96.476">
+                                                <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                                                <span class="download-btn__text">Get v8.9.96</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>v8.9.94.470</td>
+                                        <td>67 MB</td>
+                                        <td>Dec 2025</td>
+                                        <td>Offline mode enhanced, better stability</td>
+                                        <td>
+                                            <button type="button" class="download-btn" data-version="8.9.94.470" data-url="#" aria-label="Download version 8.9.94.470">
+                                                <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                                                <span class="download-btn__text">Get v8.9.94</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>v8.9.90.456</td>
+                                        <td>66 MB</td>
+                                        <td>Nov 2025</td>
+                                        <td>New UI refresh, performance boost</td>
+                                        <td>
+                                            <button type="button" class="download-btn" data-version="8.9.90.456" data-url="#" aria-label="Download version 8.9.90.456">
+                                                <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                                                <span class="download-btn__text">Get v8.9.90</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- Mobile Version Cards (shown on mobile, hidden on desktop) -->
+                        <div class="version-cards">
+                            <!-- Latest Version Card -->
+                            <div class="version-card version-card--latest">
+                                <div class="version-card__header">
+                                    <span class="version-card__version">v8.9.98.488</span>
+                                    <span class="version-card__badge">Latest</span>
+                                </div>
+                                <div class="version-card__meta">
+                                    <span>
+                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                                        70 MB
+                                    </span>
+                                    <span>
+                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                                        Feb 2026
+                                    </span>
+                                </div>
+                                <p class="version-card__changes">Latest stable, bug fixes, improved streaming</p>
+                                <button type="button" class="download-btn download-btn--latest version-card__btn" data-version="8.9.98.488" data-url="#" aria-label="Download version 8.9.98.488">
+                                    <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                                    <span class="download-btn__text">Download v8.9.98</span>
+                                </button>
+                            </div>
+                            
+                            <!-- Version 8.9.96 -->
+                            <div class="version-card">
+                                <div class="version-card__header">
+                                    <span class="version-card__version">v8.9.96.476</span>
+                                </div>
+                                <div class="version-card__meta">
+                                    <span>
+                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                                        68 MB
+                                    </span>
+                                    <span>
+                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                                        Jan 2026
+                                    </span>
+                                </div>
+                                <p class="version-card__changes">UI improvements, faster loading</p>
+                                <button type="button" class="download-btn version-card__btn" data-version="8.9.96.476" data-url="#" aria-label="Download version 8.9.96.476">
+                                    <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                                    <span class="download-btn__text">Download v8.9.96</span>
+                                </button>
+                            </div>
+                            
+                            <!-- Version 8.9.94 -->
+                            <div class="version-card">
+                                <div class="version-card__header">
+                                    <span class="version-card__version">v8.9.94.470</span>
+                                </div>
+                                <div class="version-card__meta">
+                                    <span>
+                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                                        67 MB
+                                    </span>
+                                    <span>
+                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                                        Dec 2025
+                                    </span>
+                                </div>
+                                <p class="version-card__changes">Offline mode enhanced, better stability</p>
+                                <button type="button" class="download-btn version-card__btn" data-version="8.9.94.470" data-url="#" aria-label="Download version 8.9.94.470">
+                                    <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                                    <span class="download-btn__text">Download v8.9.94</span>
+                                </button>
+                            </div>
+                            
+                            <!-- Version 8.9.90 -->
+                            <div class="version-card">
+                                <div class="version-card__header">
+                                    <span class="version-card__version">v8.9.90.456</span>
+                                </div>
+                                <div class="version-card__meta">
+                                    <span>
+                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                                        66 MB
+                                    </span>
+                                    <span>
+                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                                        Nov 2025
+                                    </span>
+                                </div>
+                                <p class="version-card__changes">New UI refresh, performance boost</p>
+                                <button type="button" class="download-btn version-card__btn" data-version="8.9.90.456" data-url="#" aria-label="Download version 8.9.90.456">
+                                    <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                                    <span class="download-btn__text">Download v8.9.90</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         
         <!-- Installation Guide for Every Android Version -->
         <section class="howto" aria-labelledby="howto-heading">
@@ -2760,180 +2937,6 @@
                         </div>
                         <p>As you can see, flagship devices with <strong>Snapdragon 8 Gen 3</strong> or <strong>Google Tensor G3</strong> chipsets launch the app in just over one second, while budget phones with MediaTek Dimensity or Helio processors take roughly 3 to 4 seconds. RAM usage stays under <strong>200 MB</strong> across the board, which means even devices with 3 GB of RAM run the mod comfortably alongside other apps.</p>
                         <p>Battery drain is the metric most people care about for a music app, and the results are excellent. On flagships, you lose roughly <strong>3% per hour</strong> of continuous 320kbps streaming — that means a full day of listening on a 5,000 mAh battery. Budget devices consume a bit more due to less efficient processors, but even the Galaxy A15 manages over 17 hours of continuous playback on a full charge. That is more than enough for anyone.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Version History Section -->
-        <section class="details-section" aria-labelledby="version-heading">
-            <div class="container">
-                <div class="details-grid">
-                    <article class="detail-card" id="download">
-                        <div class="detail-card__header">
-                            <div class="detail-card__icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <h2 id="version-heading" class="detail-card__title">Version History &amp; Changelog</h2>
-                        </div>
-                        <p>Stay updated with the latest Spotify Mod APK versions. We regularly update our mod to ensure compatibility and include the newest features.</p>
-                        <div class="table-wrapper">
-                            <table class="detail-card__table">
-                                <thead>
-                                    <tr>
-                                        <th>Version</th>
-                                        <th>Size</th>
-                                        <th>Release Date</th>
-                                        <th>What's New</th>
-                                        <th>Download</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>v8.9.98.488</strong></td>
-                                        <td>70 MB</td>
-                                        <td>Feb 2026</td>
-                                        <td>Latest stable, bug fixes, improved streaming</td>
-                                        <td>
-                                            <button type="button" class="download-btn download-btn--latest" data-version="8.9.98.488" data-url="#" aria-label="Download version 8.9.98.488">
-                                                <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                                                <span class="download-btn__text">Get v8.9.98</span>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>v8.9.96.476</td>
-                                        <td>68 MB</td>
-                                        <td>Jan 2026</td>
-                                        <td>UI improvements, faster loading</td>
-                                        <td>
-                                            <button type="button" class="download-btn" data-version="8.9.96.476" data-url="#" aria-label="Download version 8.9.96.476">
-                                                <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                                                <span class="download-btn__text">Get v8.9.96</span>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>v8.9.94.470</td>
-                                        <td>67 MB</td>
-                                        <td>Dec 2025</td>
-                                        <td>Offline mode enhanced, better stability</td>
-                                        <td>
-                                            <button type="button" class="download-btn" data-version="8.9.94.470" data-url="#" aria-label="Download version 8.9.94.470">
-                                                <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                                                <span class="download-btn__text">Get v8.9.94</span>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>v8.9.90.456</td>
-                                        <td>66 MB</td>
-                                        <td>Nov 2025</td>
-                                        <td>New UI refresh, performance boost</td>
-                                        <td>
-                                            <button type="button" class="download-btn" data-version="8.9.90.456" data-url="#" aria-label="Download version 8.9.90.456">
-                                                <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                                                <span class="download-btn__text">Get v8.9.90</span>
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        
-                        <!-- Mobile Version Cards (shown on mobile, hidden on desktop) -->
-                        <div class="version-cards">
-                            <!-- Latest Version Card -->
-                            <div class="version-card version-card--latest">
-                                <div class="version-card__header">
-                                    <span class="version-card__version">v8.9.98.488</span>
-                                    <span class="version-card__badge">Latest</span>
-                                </div>
-                                <div class="version-card__meta">
-                                    <span>
-                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                                        70 MB
-                                    </span>
-                                    <span>
-                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
-                                        Feb 2026
-                                    </span>
-                                </div>
-                                <p class="version-card__changes">Latest stable, bug fixes, improved streaming</p>
-                                <button type="button" class="download-btn download-btn--latest version-card__btn" data-version="8.9.98.488" data-url="#" aria-label="Download version 8.9.98.488">
-                                    <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                                    <span class="download-btn__text">Download v8.9.98</span>
-                                </button>
-                            </div>
-                            
-                            <!-- Version 8.9.96 -->
-                            <div class="version-card">
-                                <div class="version-card__header">
-                                    <span class="version-card__version">v8.9.96.476</span>
-                                </div>
-                                <div class="version-card__meta">
-                                    <span>
-                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                                        68 MB
-                                    </span>
-                                    <span>
-                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
-                                        Jan 2026
-                                    </span>
-                                </div>
-                                <p class="version-card__changes">UI improvements, faster loading</p>
-                                <button type="button" class="download-btn version-card__btn" data-version="8.9.96.476" data-url="#" aria-label="Download version 8.9.96.476">
-                                    <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                                    <span class="download-btn__text">Download v8.9.96</span>
-                                </button>
-                            </div>
-                            
-                            <!-- Version 8.9.94 -->
-                            <div class="version-card">
-                                <div class="version-card__header">
-                                    <span class="version-card__version">v8.9.94.470</span>
-                                </div>
-                                <div class="version-card__meta">
-                                    <span>
-                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                                        67 MB
-                                    </span>
-                                    <span>
-                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
-                                        Dec 2025
-                                    </span>
-                                </div>
-                                <p class="version-card__changes">Offline mode enhanced, better stability</p>
-                                <button type="button" class="download-btn version-card__btn" data-version="8.9.94.470" data-url="#" aria-label="Download version 8.9.94.470">
-                                    <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                                    <span class="download-btn__text">Download v8.9.94</span>
-                                </button>
-                            </div>
-                            
-                            <!-- Version 8.9.90 -->
-                            <div class="version-card">
-                                <div class="version-card__header">
-                                    <span class="version-card__version">v8.9.90.456</span>
-                                </div>
-                                <div class="version-card__meta">
-                                    <span>
-                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                                        66 MB
-                                    </span>
-                                    <span>
-                                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
-                                        Nov 2025
-                                    </span>
-                                </div>
-                                <p class="version-card__changes">New UI refresh, performance boost</p>
-                                <button type="button" class="download-btn version-card__btn" data-version="8.9.90.456" data-url="#" aria-label="Download version 8.9.90.456">
-                                    <svg class="download-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                                    <span class="download-btn__text">Download v8.9.90</span>
-                                </button>
-                            </div>
-                        </div>
                     </article>
                 </div>
             </div>
