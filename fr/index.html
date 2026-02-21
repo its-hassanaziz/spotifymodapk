@@ -3137,6 +3137,17 @@
                         <li class="nav__item"><a href="../blogs/" class="nav__link">Blog</a></li>
                         <li class="nav__item"><a href="../contact/" class="nav__link">Contactez-nous</a></li>
                     </ul>
+                    <div class="lang-switcher" id="langSwitcher">
+                        <button type="button" class="lang-switcher__toggle" aria-expanded="false" aria-haspopup="true" aria-label="Changer de langue">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            <span class="lang-switcher__code">FR</span>
+                            <svg class="lang-switcher__arrow" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                        </button>
+                        <div class="lang-switcher__dropdown" role="menu">
+                            <a href="../" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag">🇬🇧</span> English</a>
+                            <a href="./" class="lang-switcher__link lang-switcher__link--active" role="menuitem"><span class="lang-switcher__flag">🇫🇷</span> Français</a>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -3844,7 +3855,7 @@
                             <div class="reviews-grid">
                                 <!-- Review 1 -->
                                 <figure class="review-card" itemscope itemtype="https://schema.org/Review">
-                                    <div class="review-card__stars" role="img" aria-label="5 out of 5 stars">
+                                    <div class="review-card__stars" role="img" aria-label="5 étoiles sur 5">
                                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -3852,13 +3863,13 @@
                                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                                     </div>
                                     <blockquote class="review-card__content" itemprop="reviewBody">
-                                        <p class="review-card__text">I was skeptical about the safety at first, but VirusTotal showed it's completely <strong>safe to install</strong>. The <strong>offline music download</strong> feature works flawlessly on my Samsung S24 — I can listen during my commute without using any data!</p>
+                                        <p class="review-card__text">J'étais sceptique sur la sécurité au début, mais VirusTotal a montré que c'est complètement <strong>sûr à installer</strong>. La fonction de <strong>téléchargement de musique hors ligne</strong> fonctionne parfaitement sur mon Samsung S24 — je peux écouter pendant mon trajet sans utiliser de données !</p>
                                     </blockquote>
                                     <figcaption class="review-card__author">
                                         <div class="review-card__avatar" aria-hidden="true">MR</div>
                                         <div class="review-card__info">
                                             <cite class="review-card__name" itemprop="author">Marcus Rodriguez</cite>
-                                            <span class="review-card__meta">Android User • Samsung Galaxy S24</span>
+                                            <span class="review-card__meta">Utilisateur Android • Samsung Galaxy S24</span>
                                             <span class="review-card__verified">
                                                 <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
                                                 Téléchargement vérifié
@@ -3882,13 +3893,13 @@
                                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                                     </div>
                                     <blockquote class="review-card__content" itemprop="reviewBody">
-                                        <p class="review-card__text">Finally, <strong>no ads</strong> interrupting my workout playlists! The <strong>high quality audio</strong> at 320kbps makes a huge difference with my AirPods Pro. Best mod I've ever used — feels exactly like the real premium experience.</p>
+                                        <p class="review-card__text">Enfin, <strong>plus de publicités</strong> qui interrompent mes playlists d'entraînement ! La <strong>qualité audio élevée</strong> à 320kbps fait une énorme différence avec mes AirPods Pro. Le meilleur mod que j'ai jamais utilisé — on dirait exactement l'expérience premium réelle.</p>
                                     </blockquote>
                                     <figcaption class="review-card__author">
                                         <div class="review-card__avatar" aria-hidden="true">EW</div>
                                         <div class="review-card__info">
                                             <cite class="review-card__name" itemprop="author">Emily Watson</cite>
-                                            <span class="review-card__meta">iOS User • iPhone 15 Pro</span>
+                                            <span class="review-card__meta">Utilisatrice iOS • iPhone 15 Pro</span>
                                             <span class="review-card__verified">
                                                 <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
                                                 Téléchargement vérifié
@@ -3912,13 +3923,13 @@
                                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                                     </div>
                                     <blockquote class="review-card__content" itemprop="reviewBody">
-                                        <p class="review-card__text">Unlimited skips and <strong>no ads</strong> while studying — this is a game changer! I downloaded 200+ songs for <strong>offline music download</strong> and it didn't take much storage. The <strong>high quality audio</strong> is crystal clear.</p>
+                                        <p class="review-card__text">Skips illimités et <strong>aucune publicité</strong> pendant les études — c'est révolutionnaire ! J'ai téléchargé 200+ chansons pour l'écoute <strong>hors ligne</strong> et ça n'a pas pris beaucoup de stockage. La <strong>qualité audio élevée</strong> est cristalline.</p>
                                     </blockquote>
                                     <figcaption class="review-card__author">
                                         <div class="review-card__avatar" aria-hidden="true">JK</div>
                                         <div class="review-card__info">
                                             <cite class="review-card__name" itemprop="author">Jason Kim</cite>
-                                            <span class="review-card__meta">Android User • Google Pixel 8</span>
+                                            <span class="review-card__meta">Utilisateur Android • Google Pixel 8</span>
                                             <span class="review-card__verified">
                                                 <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
                                                 Téléchargement vérifié
@@ -3942,13 +3953,13 @@
                                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                                     </div>
                                     <blockquote class="review-card__content" itemprop="reviewBody">
-                                        <p class="review-card__text">Was worried if it was <strong>safe to install</strong>, but followed the guide and scanned with multiple antiviruses — all clean! Now I enjoy premium features without paying. The installation was super easy on my OnePlus.</p>
+                                        <p class="review-card__text">J'étais inquiet pour la sécurité, mais j'ai suivi le guide et scanné avec plusieurs antivirus — tout est propre ! Maintenant je profite des fonctionnalités premium sans payer. L'installation était super facile sur mon OnePlus.</p>
                                     </blockquote>
                                     <figcaption class="review-card__author">
                                         <div class="review-card__avatar" aria-hidden="true">SP</div>
                                         <div class="review-card__info">
                                             <cite class="review-card__name" itemprop="author">Sarah Patel</cite>
-                                            <span class="review-card__meta">Android User • OnePlus 12</span>
+                                            <span class="review-card__meta">Utilisateur Android • OnePlus 12</span>
                                             <span class="review-card__verified">
                                                 <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
                                                 Téléchargement vérifié
@@ -3972,13 +3983,13 @@
                                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                                     </div>
                                     <blockquote class="review-card__content" itemprop="reviewBody">
-                                        <p class="review-card__text">The <strong>high quality audio</strong> is insane — 320kbps sounds so much better than the free version! <strong>No ads</strong> during my late night sessions is a blessing. Been using it for 3 months now, works perfectly on my Xiaomi.</p>
+                                        <p class="review-card__text">La <strong>qualité audio élevée</strong> est incroyable — 320kbps sonne tellement mieux que la version gratuite ! <strong>Aucune pub</strong> pendant mes sessions nocturnes, c'est une bénédiction. Je l'utilise depuis 3 mois, fonctionne parfaitement sur mon Xiaomi.</p>
                                     </blockquote>
                                     <figcaption class="review-card__author">
                                         <div class="review-card__avatar" aria-hidden="true">DL</div>
                                         <div class="review-card__info">
                                             <cite class="review-card__name" itemprop="author">David Lee</cite>
-                                            <span class="review-card__meta">Android User • Xiaomi 14 Ultra</span>
+                                            <span class="review-card__meta">Utilisateur Android • Xiaomi 14 Ultra</span>
                                             <span class="review-card__verified">
                                                 <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
                                                 Téléchargement vérifié
@@ -4002,13 +4013,13 @@
                                         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                                     </div>
                                     <blockquote class="review-card__content" itemprop="reviewBody">
-                                        <p class="review-card__text">Checked on VirusTotal before installing — totally <strong>safe to install</strong>! The <strong>offline music download</strong> saved my life on a 12-hour flight. Downloaded my entire playlist and it worked flawlessly in airplane mode.</p>
+                                        <p class="review-card__text">Vérifié sur VirusTotal avant l'installation — totalement <strong>sûr à installer</strong> ! Le <strong>téléchargement de musique hors ligne</strong> m'a sauvé la vie lors d'un vol de 12 heures. J'ai téléchargé toute ma playlist et ça fonctionnait parfaitement en mode avion.</p>
                                     </blockquote>
                                     <figcaption class="review-card__author">
                                         <div class="review-card__avatar" aria-hidden="true">AM</div>
                                         <div class="review-card__info">
                                             <cite class="review-card__name" itemprop="author">Amanda Martinez</cite>
-                                            <span class="review-card__meta">iOS User • iPad Pro</span>
+                                            <span class="review-card__meta">Utilisatrice iOS • iPad Pro</span>
                                             <span class="review-card__verified">
                                                 <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
                                                 Téléchargement vérifié
@@ -4952,6 +4963,37 @@
         window.addEventListener('scroll', toggleStickyBar, { passive: true });
         window.addEventListener('resize', toggleStickyBar, { passive: true });
         toggleStickyBar();
+    })();
+    </script>
+    
+    <!-- Language Switcher Script -->
+    <script>
+    (function() {
+        'use strict';
+        var switcher = document.getElementById('langSwitcher');
+        if (!switcher) return;
+        var toggle = switcher.querySelector('.lang-switcher__toggle');
+        
+        toggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var isOpen = switcher.classList.toggle('is-open');
+            toggle.setAttribute('aria-expanded', isOpen);
+        });
+        
+        document.addEventListener('click', function(e) {
+            if (!switcher.contains(e.target)) {
+                switcher.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && switcher.classList.contains('is-open')) {
+                switcher.classList.remove('is-open');
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.focus();
+            }
+        });
     })();
     </script>
 </body>
