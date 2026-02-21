@@ -470,6 +470,7 @@ p {
         visibility: hidden;
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s ease;
         overflow-y: auto;
+        overflow-x: hidden;
         z-index: 99999;
         box-shadow: -4px 0 24px rgba(0, 0, 0, 0.5);
         will-change: transform;
@@ -2128,7 +2129,7 @@ p {
 .lang-switcher__toggle:hover,
 .lang-switcher__toggle:focus {
     opacity: 0.85;
-    background: var(--color-bg-elevated);
+    background: transparent;
 }
 
 .lang-switcher__toggle svg {
@@ -2217,42 +2218,53 @@ p {
 @media (max-width: 1023px) {
     .lang-switcher {
         order: -1;
+        position: relative;
         width: 100%;
         border-top: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         margin-top: 0;
-        padding-top: 0;
-        padding-bottom: 8px;
-        margin-bottom: 8px;
+        padding: 0 0 4px;
+        margin-bottom: 4px;
     }
 
     .lang-switcher__toggle {
         width: 100%;
         justify-content: flex-start;
-        min-height: 52px;
-        padding: var(--space-md) var(--space-lg);
+        min-height: 44px;
+        padding: 8px 12px;
         font-size: var(--font-size-lg);
+        background: transparent;
+    }
+
+    .lang-switcher__toggle:hover,
+    .lang-switcher__toggle:focus {
+        background: transparent;
     }
 
     .lang-switcher__dropdown {
-        position: static !important;
+        position: absolute !important;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
         min-width: 100%;
-        border: none;
-        background: rgba(255, 255, 255, 0.04);
-        box-shadow: none;
-        transform: none;
+        background: #1e1e1e;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        transform: none !important;
         max-height: 0;
         overflow: hidden;
         padding: 0;
-        opacity: 1;
-        visibility: visible;
-        transition: max-height 0.3s ease, padding 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 10;
+        transition: max-height 0.25s ease, opacity 0.2s ease, visibility 0.2s ease, padding 0.25s ease;
     }
 
     .lang-switcher.is-open .lang-switcher__dropdown {
-        max-height: 400px;
-        padding: 6px;
-        transform: none;
+        max-height: 200px;
+        padding: 4px;
         opacity: 1;
         visibility: visible;
     }
