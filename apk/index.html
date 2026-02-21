@@ -2254,25 +2254,26 @@
                 <nav class="nav" id="primary-nav" role="navigation" aria-label="Primary navigation">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="../" class="nav__link">Home</a></li>
-                        <li class="nav__item"><a href="../apk/" class="nav__link nav__link--active" aria-current="page">APK</a></li>
+                        <li class="nav__item"><a href="./" class="nav__link nav__link--active" aria-current="page">APK</a></li>
                         <li class="nav__item"><a href="../ios/" class="nav__link">iOS</a></li>
                         <li class="nav__item"><a href="../mac/" class="nav__link">Mac</a></li>
                         <li class="nav__item"><a href="../windows/" class="nav__link">Windows</a></li>
                         <li class="nav__item"><a href="../blogs/" class="nav__link">Blogs</a></li>
                         <li class="nav__item"><a href="../contact/" class="nav__link">Contact Us</a></li>
                     </ul>
-                    <div class="lang-switcher" id="langSwitcher">
-                        <button type="button" class="lang-switcher__toggle" aria-expanded="false" aria-haspopup="true" aria-label="Change language">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-                            <span class="lang-switcher__code">EN</span>
-                            <svg class="lang-switcher__arrow" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
-                        </button>
-                        <div class="lang-switcher__dropdown" role="menu">
-                            <a href="../apk/" class="lang-switcher__link lang-switcher__link--active" role="menuitem"><span class="lang-switcher__flag">🇬🇧</span> English</a>
-                            <a href="../fr/apk/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag">🇫🇷</span> Français</a>
-                        </div>
-                    </div>
                 </nav>
+                <div class="lang-switcher" id="langSwitcher">
+                    <button type="button" class="lang-switcher__toggle" aria-expanded="false" aria-haspopup="true" aria-label="Change language">
+                        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10" fill="#2196F3"/><ellipse cx="12" cy="12" rx="4.5" ry="10" fill="none" stroke="#fff" stroke-width="1.2"/><line x1="2" y1="12" x2="22" y2="12" stroke="#fff" stroke-width="1.2"/><line x1="4" y1="7" x2="20" y2="7" stroke="#fff" stroke-width="0.8"/><line x1="4" y1="17" x2="20" y2="17" stroke="#fff" stroke-width="0.8"/><path d="M5 4C7 6 10 9 12 12c2-3 5-6 7-8" fill="#4CAF50" opacity="0.5"/><path d="M3 14c3 2 6 3 9 3s6-1 9-3c-1 4-4 7-9 8-5-1-8-4-9-8z" fill="#4CAF50" opacity="0.6"/></svg>
+                        <span class="lang-switcher__toggle-flag">🇬🇧</span>
+                        <span class="lang-switcher__code">EN</span>
+                        <svg class="lang-switcher__arrow" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                    </button>
+                    <div class="lang-switcher__dropdown" role="menu">
+                        <a href="./" class="lang-switcher__link lang-switcher__link--active" role="menuitem"><span class="lang-switcher__flag">🇬🇧</span> English</a>
+                        <a href="../fr/apk/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag">🇫🇷</span> Français</a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -2374,35 +2375,6 @@
                     <path d="M12 5v14M19 12l-7 7-7-7"/>
                 </svg>
             </a>
-        </section>
-        
-        <!-- Android-Exclusive Advantages Section -->
-        <section class="details-section" aria-labelledby="whats-new-heading">
-            <div class="container">
-                <div class="details-grid">
-                    <article class="detail-card">
-                        <div class="detail-card__header">
-                            <div class="detail-card__icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 20V10"/>
-                                    <path d="M18 20V4"/>
-                                    <path d="M6 20v-4"/>
-                                </svg>
-                            </div>
-                            <h2 id="whats-new-heading" class="detail-card__title">Android-Exclusive Perks You Will Not Find on Any Other Platform</h2>
-                        </div>
-                        <p>Android is not just compatible with Spotify Mod APK — it is the <strong>ideal platform</strong> for it. The operating system offers a handful of integrations and capabilities that make the listening experience on Android genuinely superior to what you would get on iOS, Mac, or Windows. Here is what you unlock exclusively on Android.</p>
-                        <p><strong>Home Screen Widgets:</strong> Long-press your home screen, tap Widgets, and drag over a Spotify widget. You get a beautiful <strong>4×1 Now Playing bar</strong> that shows album art, track title, and artist name alongside play, pause, and skip controls. There is also a smaller 4×1 minimal control strip for those who prefer a cleaner launcher. No need to open the app at all — just glance at your home screen and tap play.</p>
-                        <p><strong>Android Auto Integration:</strong> Plug your phone into your car's USB port or connect wirelessly, and <strong>Spotify Mod APK</strong> appears right on your infotainment display. Browse your playlists, jump between podcasts, and control playback with steering wheel buttons or voice commands. The interface is optimized for at-a-glance readability while driving, complete with large album art and minimal text. Rightly so — your eyes belong on the road, not your phone.</p>
-                        <p><strong>Wear OS Smartwatch Control:</strong> If you own a <strong>Samsung Galaxy Watch</strong>, <strong>Google Pixel Watch</strong>, or any Wear OS device, you can control Spotify Mod playback directly from your wrist. Pause, skip, adjust volume, and even see what is playing — all without reaching for your phone. It is perfect for workouts, runs, or those moments when your phone is across the room.</p>
-                        <p><strong>Split-Screen Multitasking:</strong> Android lets you snap Spotify into a split-screen window alongside another app. Browse Reddit, reply to messages, or watch a tutorial video while your music keeps playing in a visible mini-window at the bottom of your screen. Try doing that on an iPhone, no chance.</p>
-                        <p><strong>SD Card Storage for Offline Downloads:</strong> Running low on internal storage? Android lets you redirect Spotify's offline downloads to an <strong>external SD card</strong>. Head to Settings → Storage inside the app, and select your SD card as the download location. This is a lifesaver for devices with 32 GB or 64 GB of internal storage where space is always at a premium. You could easily store <strong>5,000+ songs</strong> on a cheap 32 GB microSD without touching your phone's main storage.</p>
-                        <p><strong>Quick Settings Playback Tile:</strong> Swipe down from the top of your screen and you will see a media control tile right in your Quick Settings panel. Play, pause, skip, and see the current track — all without leaving whatever app you are currently using. Android's media session integration means this tile activates automatically the moment you start playing anything in Spotify Mod.</p>
-                        <p><strong>Rich Notification Controls:</strong> Android's notification shade gives you a <strong>full media player</strong> when Spotify Mod is active. You see album artwork, track and artist info, a seek bar, and controls for previous, play/pause, next, and like. On Android 13 and above, the notification even features a smooth animated waveform that matches your music. It is genuinely beautiful and functional at the same time.</p>
-                        <p><strong>Google Assistant Voice Control:</strong> Set Spotify as your default music provider in Google Assistant settings, and you unlock hands-free control everywhere. Say "Hey Google, play my Discover Weekly" or "Hey Google, shuffle my liked songs" and it just works — on your phone, Nest speaker, or any Google-powered device. This deep voice integration is an Android-exclusive advantage that makes the mod feel even more native.</p>
-                    </article>
-                </div>
-            </div>
         </section>
         
         <!-- Version History Section -->
@@ -2574,6 +2546,35 @@
                                 </button>
                             </div>
                         </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Android-Exclusive Advantages Section -->
+        <section class="details-section" aria-labelledby="whats-new-heading">
+            <div class="container">
+                <div class="details-grid">
+                    <article class="detail-card">
+                        <div class="detail-card__header">
+                            <div class="detail-card__icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 20V10"/>
+                                    <path d="M18 20V4"/>
+                                    <path d="M6 20v-4"/>
+                                </svg>
+                            </div>
+                            <h2 id="whats-new-heading" class="detail-card__title">Android-Exclusive Perks You Will Not Find on Any Other Platform</h2>
+                        </div>
+                        <p>Android is not just compatible with Spotify Mod APK — it is the <strong>ideal platform</strong> for it. The operating system offers a handful of integrations and capabilities that make the listening experience on Android genuinely superior to what you would get on iOS, Mac, or Windows. Here is what you unlock exclusively on Android.</p>
+                        <p><strong>Home Screen Widgets:</strong> Long-press your home screen, tap Widgets, and drag over a Spotify widget. You get a beautiful <strong>4×1 Now Playing bar</strong> that shows album art, track title, and artist name alongside play, pause, and skip controls. There is also a smaller 4×1 minimal control strip for those who prefer a cleaner launcher. No need to open the app at all — just glance at your home screen and tap play.</p>
+                        <p><strong>Android Auto Integration:</strong> Plug your phone into your car's USB port or connect wirelessly, and <strong>Spotify Mod APK</strong> appears right on your infotainment display. Browse your playlists, jump between podcasts, and control playback with steering wheel buttons or voice commands. The interface is optimized for at-a-glance readability while driving, complete with large album art and minimal text. Rightly so — your eyes belong on the road, not your phone.</p>
+                        <p><strong>Wear OS Smartwatch Control:</strong> If you own a <strong>Samsung Galaxy Watch</strong>, <strong>Google Pixel Watch</strong>, or any Wear OS device, you can control Spotify Mod playback directly from your wrist. Pause, skip, adjust volume, and even see what is playing — all without reaching for your phone. It is perfect for workouts, runs, or those moments when your phone is across the room.</p>
+                        <p><strong>Split-Screen Multitasking:</strong> Android lets you snap Spotify into a split-screen window alongside another app. Browse Reddit, reply to messages, or watch a tutorial video while your music keeps playing in a visible mini-window at the bottom of your screen. Try doing that on an iPhone, no chance.</p>
+                        <p><strong>SD Card Storage for Offline Downloads:</strong> Running low on internal storage? Android lets you redirect Spotify's offline downloads to an <strong>external SD card</strong>. Head to Settings → Storage inside the app, and select your SD card as the download location. This is a lifesaver for devices with 32 GB or 64 GB of internal storage where space is always at a premium. You could easily store <strong>5,000+ songs</strong> on a cheap 32 GB microSD without touching your phone's main storage.</p>
+                        <p><strong>Quick Settings Playback Tile:</strong> Swipe down from the top of your screen and you will see a media control tile right in your Quick Settings panel. Play, pause, skip, and see the current track — all without leaving whatever app you are currently using. Android's media session integration means this tile activates automatically the moment you start playing anything in Spotify Mod.</p>
+                        <p><strong>Rich Notification Controls:</strong> Android's notification shade gives you a <strong>full media player</strong> when Spotify Mod is active. You see album artwork, track and artist info, a seek bar, and controls for previous, play/pause, next, and like. On Android 13 and above, the notification even features a smooth animated waveform that matches your music. It is genuinely beautiful and functional at the same time.</p>
+                        <p><strong>Google Assistant Voice Control:</strong> Set Spotify as your default music provider in Google Assistant settings, and you unlock hands-free control everywhere. Say "Hey Google, play my Discover Weekly" or "Hey Google, shuffle my liked songs" and it just works — on your phone, Nest speaker, or any Google-powered device. This deep voice integration is an Android-exclusive advantage that makes the mod feel even more native.</p>
                     </article>
                 </div>
             </div>
