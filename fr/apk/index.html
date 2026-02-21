@@ -81,10 +81,11 @@
     
     <!-- Critical CSS Inlined -->
     <style>
-        /* Prevent lang-switcher FOUC */
+        /* Prevent lang-switcher FOUC and mobile nav flash */
         .lang-switcher__dropdown{opacity:0;visibility:hidden;position:absolute}
         .lang-switcher{position:relative;display:flex;align-items:center}
         .nav{display:flex;align-items:center}
+        @media(max-width:1023px){.nav{flex-direction:column;position:fixed;top:0;right:0;width:280px;max-width:85vw;height:100vh;background:#121212;transform:translateX(100%);visibility:hidden;z-index:99999;overflow-y:auto;padding:80px 1.5rem 1.5rem}.lang-switcher{width:100%}.lang-switcher__dropdown{position:static!important;min-width:100%;border:none;background:rgba(255,255,255,.04);box-shadow:none;transform:none;max-height:0;overflow:hidden;padding:0}}
         :root {
             --color-primary: #1DB954;
             --color-bg-dark: #121212;
@@ -842,6 +843,7 @@
                 height: 100vh;
                 height: 100dvh;
                 background: #121212;
+                flex-direction: column;
                 padding: 80px 1.5rem 1.5rem 1.5rem;
                 transform: translateX(100%);
                 visibility: hidden;
@@ -2268,13 +2270,12 @@
                     <div class="lang-switcher" id="langSwitcher">
                         <button type="button" class="lang-switcher__toggle" aria-expanded="false" aria-haspopup="true" aria-label="Changer de langue">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-                            <span class="lang-switcher__toggle-flag">🇫🇷</span>
                             <span class="lang-switcher__code">FR</span>
                             <svg class="lang-switcher__arrow" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
                         </button>
                         <div class="lang-switcher__dropdown" role="menu">
-                            <a href="../../apk/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag">🇬🇧</span> English</a>
-                            <a href="./" class="lang-switcher__link lang-switcher__link--active" role="menuitem"><span class="lang-switcher__flag">🇫🇷</span> Français</a>
+                            <a href="../../apk/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag"><svg width="20" height="15" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#012169"/><path d="M0 0L60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0L60 40M60 0L0 40" stroke="#C8102E" stroke-width="4"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="12"/><path d="M30 0v40M0 20h60" stroke="#C8102E" stroke-width="6"/></svg></span> English</a>
+                            <a href="./" class="lang-switcher__link lang-switcher__link--active" role="menuitem"><span class="lang-switcher__flag"><svg width="20" height="15" viewBox="0 0 60 40" aria-hidden="true"><rect width="20" height="40" fill="#002395"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#ED2939"/></svg></span> Français</a>
                         </div>
                     </div>
                 </nav>

@@ -464,6 +464,7 @@ p {
         height: 100vh;
         height: 100dvh;
         background: #121212;
+        flex-direction: column;
         padding: 80px var(--space-xl) var(--space-xl) var(--space-xl);
         transform: translateX(100%);
         visibility: hidden;
@@ -2134,11 +2135,6 @@ p {
     flex-shrink: 0;
 }
 
-.lang-switcher__toggle-flag {
-    font-size: 1.25rem;
-    line-height: 1;
-}
-
 .lang-switcher__code {
     font-size: 0.8125rem;
     text-transform: uppercase;
@@ -2207,8 +2203,14 @@ p {
 }
 
 .lang-switcher__flag {
-    font-size: 1.125rem;
+    display: inline-flex;
+    align-items: center;
     line-height: 1;
+    flex-shrink: 0;
+}
+.lang-switcher__flag svg {
+    display: block;
+    border-radius: 2px;
 }
 
 /* Mobile: lang-switcher inside nav drawer, below Contact Us */
@@ -2229,7 +2231,7 @@ p {
     }
 
     .lang-switcher__dropdown {
-        position: static;
+        position: static !important;
         min-width: 100%;
         border: none;
         background: rgba(255, 255, 255, 0.04);
@@ -2238,13 +2240,17 @@ p {
         max-height: 0;
         overflow: hidden;
         padding: 0;
-        transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+        opacity: 1;
+        visibility: visible;
+        transition: max-height 0.3s ease, padding 0.3s ease;
     }
 
     .lang-switcher.is-open .lang-switcher__dropdown {
         max-height: 400px;
         padding: 6px;
         transform: none;
+        opacity: 1;
+        visibility: visible;
     }
 }
 
