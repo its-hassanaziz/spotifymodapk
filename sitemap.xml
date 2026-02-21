@@ -17,6 +17,14 @@
         </image:image>
     </url>
     
+    <!-- French Homepage -->
+    <url>
+        <loc>https://spotifymod.com/fr/</loc>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
     <!-- Download Pages -->
     <url>
         <loc>https://spotifymod.com/apk/</loc>
