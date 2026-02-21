@@ -2134,11 +2134,6 @@ p {
     flex-shrink: 0;
 }
 
-.lang-switcher__toggle-flag {
-    font-size: 1.25rem;
-    line-height: 1;
-}
-
 .lang-switcher__code {
     font-size: 0.8125rem;
     text-transform: uppercase;
@@ -2211,23 +2206,40 @@ p {
     line-height: 1;
 }
 
-/* Mobile: lang-switcher lives in header bar, left of hamburger */
+/* Mobile: lang-switcher inside nav drawer, below Contact Us */
 @media (max-width: 1023px) {
     .lang-switcher {
-        order: 1;
-    }
-
-    .nav-toggle {
-        order: 2;
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        margin-top: 0;
+        padding-top: 0;
     }
 
     .lang-switcher__toggle {
-        min-height: 44px;
-        padding: 6px 10px;
+        width: 100%;
+        justify-content: flex-start;
+        min-height: 52px;
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--font-size-lg);
     }
 
-    .lang-switcher__code {
-        display: none;
+    .lang-switcher__dropdown {
+        position: static;
+        min-width: 100%;
+        border: none;
+        background: rgba(255, 255, 255, 0.04);
+        box-shadow: none;
+        transform: none;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        transition: max-height 0.3s ease, opacity 0.2s ease, padding 0.3s ease;
+    }
+
+    .lang-switcher.is-open .lang-switcher__dropdown {
+        max-height: 400px;
+        padding: 6px;
+        transform: none;
     }
 }
 

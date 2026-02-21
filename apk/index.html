@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
@@ -81,6 +81,9 @@
     
     <!-- Critical CSS Inlined -->
     <style>
+        /* Prevent lang-switcher FOUC */
+        .lang-switcher__dropdown{opacity:0;visibility:hidden;position:absolute}
+        .lang-switcher{position:relative;display:flex;align-items:center}
         :root {
             --color-primary: #1DB954;
             --color-bg-dark: #121212;
@@ -2261,19 +2264,18 @@
                         <li class="nav__item"><a href="../blogs/" class="nav__link">Blogs</a></li>
                         <li class="nav__item"><a href="../contact/" class="nav__link">Contact Us</a></li>
                     </ul>
-                </nav>
-                <div class="lang-switcher" id="langSwitcher">
-                    <button type="button" class="lang-switcher__toggle" aria-expanded="false" aria-haspopup="true" aria-label="Change language">
-                        <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10" fill="#2196F3"/><ellipse cx="12" cy="12" rx="4.5" ry="10" fill="none" stroke="#fff" stroke-width="1.2"/><line x1="2" y1="12" x2="22" y2="12" stroke="#fff" stroke-width="1.2"/><line x1="4" y1="7" x2="20" y2="7" stroke="#fff" stroke-width="0.8"/><line x1="4" y1="17" x2="20" y2="17" stroke="#fff" stroke-width="0.8"/><path d="M5 4C7 6 10 9 12 12c2-3 5-6 7-8" fill="#4CAF50" opacity="0.5"/><path d="M3 14c3 2 6 3 9 3s6-1 9-3c-1 4-4 7-9 8-5-1-8-4-9-8z" fill="#4CAF50" opacity="0.6"/></svg>
-                        <span class="lang-switcher__toggle-flag">🇬🇧</span>
-                        <span class="lang-switcher__code">EN</span>
-                        <svg class="lang-switcher__arrow" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
-                    </button>
-                    <div class="lang-switcher__dropdown" role="menu">
-                        <a href="./" class="lang-switcher__link lang-switcher__link--active" role="menuitem"><span class="lang-switcher__flag">🇬🇧</span> English</a>
-                        <a href="../fr/apk/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag">🇫🇷</span> Français</a>
+                    <div class="lang-switcher" id="langSwitcher">
+                        <button type="button" class="lang-switcher__toggle" aria-expanded="false" aria-haspopup="true" aria-label="Change language">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            <span class="lang-switcher__code">EN</span>
+                            <svg class="lang-switcher__arrow" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                        </button>
+                        <div class="lang-switcher__dropdown" role="menu">
+                            <a href="./" class="lang-switcher__link lang-switcher__link--active" role="menuitem"><span class="lang-switcher__flag">🇬🇧</span> English</a>
+                            <a href="../fr/apk/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag">🇫🇷</span> Français</a>
+                        </div>
                     </div>
-                </div>
+                </nav>
             </div>
         </div>
     </header>
@@ -2377,6 +2379,392 @@
             </a>
         </section>
         
+        <!-- Installation Guide for Every Android Version -->
+        <section class="howto" aria-labelledby="howto-heading">
+            <div class="container">
+                <h2 id="howto-heading" class="section-title">Installing Spotify Mod APK on Every Android Version</h2>
+                <div class="howto__steps">
+                    <div class="step">
+                        <span class="step__number">1</span>
+                        <h3 class="step__title">Enable Sideloading (Path Varies by Android Version)</h3>
+                        <p class="step__desc"><strong>Android 14/13/12:</strong> Go to Settings → Apps → Special App Access → Install Unknown Apps → select your browser → toggle Allow. <strong>Android 11/10:</strong> Settings → Apps & Notifications → Advanced → Special App Access → Install Unknown Apps. <strong>Android 9 and below:</strong> Settings → Security → toggle "Unknown Sources" globally. On Samsung One UI, the path is Settings → Biometrics and Security → Install Unknown Apps.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step__number">2</span>
+                        <h3 class="step__title">Remove the Official Spotify App Completely</h3>
+                        <p class="step__desc">This is a mandatory step that most people skip, and then wonder why installation fails. Go to Settings → Apps → Spotify → Uninstall. On Xiaomi MIUI, also clear residual data from Security → Cleaner. On Samsung, check Secure Folder too — if Spotify is cloned there, remove it as well. Android blocks two apps with the same package name signed by different certificates.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step__number">3</span>
+                        <h3 class="step__title">Download the APK and Verify the File</h3>
+                        <p class="step__desc">Tap the download button on this page. Once the file finishes downloading, check the file size matches what is listed in the version history below — a mismatched size could indicate an incomplete download. If your browser shows a "harmful file" warning, that is a generic Android warning for all sideloaded APKs and can be safely dismissed for files downloaded from our official website.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step__number">4</span>
+                        <h3 class="step__title">Install the APK File</h3>
+                        <p class="step__desc">Open the downloaded APK from your notification bar or file manager. Tap "Install" and wait for the process to complete — it typically takes under 30 seconds. On Android 14 devices, you may see an additional "Scan app" prompt from Google Play Protect; you can choose "Install anyway" since Play Protect flags all sideloaded APKs regardless of their actual safety status.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step__number">5</span>
+                        <h3 class="step__title">First Launch Settings You Should Configure Immediately</h3>
+                        <p class="step__desc">Open the app and log in with your Spotify credentials (email and password works best — avoid social logins for the first sign-in). Then go to Settings → Audio Quality and set both Wi-Fi and Mobile streaming to Very High (320kbps). Next, navigate to Settings → Storage and choose your preferred download location (internal or SD card). Finally, go to your phone's Settings → Apps → Spotify Mod → Battery → set to Unrestricted to prevent Android's battery optimizer from killing playback.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Android-Specific Issues Section -->
+        <section class="details-section" aria-labelledby="troubleshooting-heading">
+            <div class="container">
+                <div class="details-grid">
+                    <article class="detail-card">
+                        <div class="detail-card__header">
+                            <div class="detail-card__icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                                </svg>
+                            </div>
+                            <h2 id="troubleshooting-heading" class="detail-card__title">Troubleshooting Android-Specific Issues</h2>
+                        </div>
+                        <div class="detail-card__faq">
+                            <details class="detail-card__faq-item">
+                                <summary>"Parse Error" During Installation</summary>
+                                <div class="detail-card__faq-answer">
+                                    <p><strong>Solution:</strong> A parse error means your Android version is too old for the APK, or the file downloaded incompletely. First, check that your device runs Android 5.0 or higher (Settings → About Phone → Android Version). If your version is compatible, delete the downloaded file and re-download it — partial downloads over unstable connections are the most common cause. On MIUI devices, also try disabling "MIUI Optimization" in Developer Options temporarily.</p>
+                                </div>
+                            </details>
+                            <details class="detail-card__faq-item">
+                                <summary>Notification Controls Not Appearing</summary>
+                                <div class="detail-card__faq-answer">
+                                    <p><strong>Solution:</strong> Go to Settings → Apps → Spotify Mod → Notifications and make sure all notification categories are enabled, especially "Media Playback." On Samsung One UI, also check Settings → Notifications → Advanced Settings and ensure "Show media on Quick Panel" is turned on. On Android 13+, you need to grant the notification permission when the app first asks — if you denied it accidentally, go to App Info → Permissions → Notifications → Allow.</p>
+                                </div>
+                            </details>
+                            <details class="detail-card__faq-item">
+                                <summary>Audio Stops When Screen Locks</summary>
+                                <div class="detail-card__faq-answer">
+                                    <p><strong>Solution:</strong> This is caused by aggressive battery optimization killing background processes. Go to Settings → Apps → Spotify Mod → Battery → Unrestricted. On Xiaomi, open Security app → Battery Saver → App Battery Saver → Spotify Mod → No Restrictions, and also toggle on Autostart. On Huawei/Honor, go to Phone Manager → App Launch → set Spotify Mod to Manage Manually and enable all three toggles (Auto-launch, Secondary Launch, Run in Background).</p>
+                                </div>
+                            </details>
+                            <details class="detail-card__faq-item">
+                                <summary>Downloads Fail or Disappear from SD Card</summary>
+                                <div class="detail-card__faq-answer">
+                                    <p><strong>Solution:</strong> Android's scoped storage on newer versions can cause issues with external storage writes. Make sure your SD card is formatted as "Portable Storage," not "Adoptable Storage." Go into Spotify Mod → Settings → Storage and re-select the SD card path. If downloads keep vanishing, try switching back to internal storage, downloading the playlist, then moving the storage location — the app will migrate existing files.</p>
+                                </div>
+                            </details>
+                            <details class="detail-card__faq-item">
+                                <summary>Spotify Connect Cannot Find Other Devices</summary>
+                                <div class="detail-card__faq-answer">
+                                    <p><strong>Solution:</strong> Spotify Connect requires all devices to be on the same Wi-Fi network. Check that your phone's Wi-Fi is connected to the same router as your speaker or laptop. On some Android skins, "Wi-Fi isolation" or "AP isolation" is enabled by default in router or hotspot settings — disable it. Also, make sure Spotify Mod has the "Nearby Devices" permission enabled in Settings → Apps → Spotify Mod → Permissions.</p>
+                                </div>
+                            </details>
+                            <details class="detail-card__faq-item">
+                                <summary>Random Force Closes on Android 14</summary>
+                                <div class="detail-card__faq-answer">
+                                    <p><strong>Solution:</strong> Android 14 introduced stricter background process limits and new permission models that can conflict with older mod builds. Make sure you are running the latest version of the mod from this page. If crashes persist, clear both cache and data (Settings → Apps → Spotify Mod → Storage → Clear Cache, then Clear Data), reinstall the APK, and log back in. Also check that Google Play Protect is not interfering — go to Play Store → Profile → Play Protect → Settings → toggle off "Scan apps with Play Protect" temporarily during setup.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- APK Integrity Verification Section -->
+        <section class="details-section" aria-labelledby="safety-heading">
+            <div class="container">
+                <div class="details-grid">
+                    <article class="detail-card">
+                        <div class="detail-card__header">
+                            <div class="detail-card__icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                            <h2 id="safety-heading" class="detail-card__title">APK Integrity Verification — How to Confirm You Got a Clean File</h2>
+                        </div>
+                        <p>Trust is earned, not assumed. Before you install any APK from any source — including ours — you should know how to verify its integrity yourself. Here is a straightforward guide to confirming that the file on your device is exactly what we published, byte for byte.</p>
+                        <div class="safety-grid">
+                            <div class="safety-item">
+                                <div class="safety-item__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                        <path d="M9 12l2 2 4-4"/>
+                                    </svg>
+                                </div>
+                                <div class="safety-item__content">
+                                    <div class="safety-item__title">SHA-256 Checksum Verification</div>
+                                    <div class="safety-item__desc">Use a file hash checker app from the Play Store or run <code>sha256sum</code> in Termux to generate the hash of your downloaded APK. Compare it against the checksum we publish alongside every release. A matching hash guarantees the file has not been tampered with during download.</div>
+                                </div>
+                            </div>
+                            <div class="safety-item">
+                                <div class="safety-item__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                                        <path d="M9 12l2 2 4-4"/>
+                                    </svg>
+                                </div>
+                                <div class="safety-item__content">
+                                    <div class="safety-item__title">VirusTotal Multi-Engine Scan</div>
+                                    <div class="safety-item__desc">Upload the APK to <strong>VirusTotal.com</strong>, which scans it against 64+ antivirus engines simultaneously. Our builds consistently return <strong>0/64 detections</strong>. If any engine flags it, the report will tell you whether it is a false positive from heuristic analysis or a genuine concern. Always check for yourself.</div>
+                                </div>
+                            </div>
+                            <div class="safety-item">
+                                <div class="safety-item__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                    </svg>
+                                </div>
+                                <div class="safety-item__content">
+                                    <div class="safety-item__title">Permission Audit vs Official App</div>
+                                    <div class="safety-item__desc">After installation, go to Settings → Apps → Spotify Mod → Permissions and review every granted permission. The mod should request the same or fewer permissions than the official Spotify app — microphone (for voice search), storage (for offline downloads), notifications, and nearby devices. If you see unusual requests like SMS or phone access, the file is not from us.</div>
+                                </div>
+                            </div>
+                            <div class="safety-item">
+                                <div class="safety-item__icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 12l2 2 4-4"/>
+                                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="safety-item__content">
+                                    <div class="safety-item__title">APK Signature Consistency</div>
+                                    <div class="safety-item__desc">Each of our releases is signed with the same private certificate. Use an app like <strong>APK Analyzer</strong> or <strong>Apktool</strong> to check the signer certificate fingerprint. If you are updating from a previous version and the signatures match, Android will install it directly over the old build — a mismatched signature means the file came from a different source.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Android-Exclusive Advantages Section -->
+        <section class="details-section" aria-labelledby="whats-new-heading">
+            <div class="container">
+                <div class="details-grid">
+                    <article class="detail-card">
+                        <div class="detail-card__header">
+                            <div class="detail-card__icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 20V10"/>
+                                    <path d="M18 20V4"/>
+                                    <path d="M6 20v-4"/>
+                                </svg>
+                            </div>
+                            <h2 id="whats-new-heading" class="detail-card__title">Android-Exclusive Perks You Will Not Find on Any Other Platform</h2>
+                        </div>
+                        <p>Android is not just compatible with Spotify Mod APK — it is the <strong>ideal platform</strong> for it. The operating system offers a handful of integrations and capabilities that make the listening experience on Android genuinely superior to what you would get on iOS, Mac, or Windows. Here is what you unlock exclusively on Android.</p>
+                        <p><strong>Home Screen Widgets:</strong> Long-press your home screen, tap Widgets, and drag over a Spotify widget. You get a beautiful <strong>4×1 Now Playing bar</strong> that shows album art, track title, and artist name alongside play, pause, and skip controls. There is also a smaller 4×1 minimal control strip for those who prefer a cleaner launcher. No need to open the app at all — just glance at your home screen and tap play.</p>
+                        <p><strong>Android Auto Integration:</strong> Plug your phone into your car's USB port or connect wirelessly, and <strong>Spotify Mod APK</strong> appears right on your infotainment display. Browse your playlists, jump between podcasts, and control playback with steering wheel buttons or voice commands. The interface is optimized for at-a-glance readability while driving, complete with large album art and minimal text. Rightly so — your eyes belong on the road, not your phone.</p>
+                        <p><strong>Wear OS Smartwatch Control:</strong> If you own a <strong>Samsung Galaxy Watch</strong>, <strong>Google Pixel Watch</strong>, or any Wear OS device, you can control Spotify Mod playback directly from your wrist. Pause, skip, adjust volume, and even see what is playing — all without reaching for your phone. It is perfect for workouts, runs, or those moments when your phone is across the room.</p>
+                        <p><strong>Split-Screen Multitasking:</strong> Android lets you snap Spotify into a split-screen window alongside another app. Browse Reddit, reply to messages, or watch a tutorial video while your music keeps playing in a visible mini-window at the bottom of your screen. Try doing that on an iPhone, no chance.</p>
+                        <p><strong>SD Card Storage for Offline Downloads:</strong> Running low on internal storage? Android lets you redirect Spotify's offline downloads to an <strong>external SD card</strong>. Head to Settings → Storage inside the app, and select your SD card as the download location. This is a lifesaver for devices with 32 GB or 64 GB of internal storage where space is always at a premium. You could easily store <strong>5,000+ songs</strong> on a cheap 32 GB microSD without touching your phone's main storage.</p>
+                        <p><strong>Quick Settings Playback Tile:</strong> Swipe down from the top of your screen and you will see a media control tile right in your Quick Settings panel. Play, pause, skip, and see the current track — all without leaving whatever app you are currently using. Android's media session integration means this tile activates automatically the moment you start playing anything in Spotify Mod.</p>
+                        <p><strong>Rich Notification Controls:</strong> Android's notification shade gives you a <strong>full media player</strong> when Spotify Mod is active. You see album artwork, track and artist info, a seek bar, and controls for previous, play/pause, next, and like. On Android 13 and above, the notification even features a smooth animated waveform that matches your music. It is genuinely beautiful and functional at the same time.</p>
+                        <p><strong>Google Assistant Voice Control:</strong> Set Spotify as your default music provider in Google Assistant settings, and you unlock hands-free control everywhere. Say "Hey Google, play my Discover Weekly" or "Hey Google, shuffle my liked songs" and it just works — on your phone, Nest speaker, or any Google-powered device. This deep voice integration is an Android-exclusive advantage that makes the mod feel even more native.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Power User Secrets Section -->
+        <section class="details-section" aria-labelledby="tips-heading">
+            <div class="container">
+                <div class="details-grid">
+                    <article class="detail-card">
+                        <div class="detail-card__header">
+                            <div class="detail-card__icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/>
+                                    <line x1="9" y1="21" x2="15" y2="21"/>
+                                </svg>
+                            </div>
+                            <h2 id="tips-heading" class="detail-card__title">Power User Secrets — Hidden Settings Most People Never Find</h2>
+                        </div>
+                        <p>You have the mod installed, the audio quality is maxed out, and your playlists are downloaded. But there is a whole layer of hidden functionality that <strong>99% of users</strong> never discover. These techniques go beyond the basics and will genuinely transform your experience.</p>
+                        <p><strong>Force LDAC Bluetooth Codec via Developer Options:</strong> By default, Android uses SBC or AAC for Bluetooth audio, both of which compress your 320kbps stream down to roughly 200kbps or less. To fix this, enable Developer Options (tap Build Number 7 times in About Phone), then go to Developer Options → Bluetooth Audio Codec → select <strong>LDAC</strong>. This transmits at up to <strong>990kbps</strong>, preserving every detail of your high-quality Spotify stream. Not all headphones support it, but if yours do, the difference is staggering.</p>
+                        <p><strong>Disable Bluetooth Absolute Volume:</strong> Ever frustrated that your phone's volume and headphone volume are locked together? In Developer Options, toggle off <strong>"Disable Absolute Volume."</strong> This separates the two volume controls so you can fine-tune phone output and headphone output independently. It is a small change that makes a surprisingly large difference, especially with third-party Bluetooth speakers that have their own volume curve.</p>
+                        <p><strong>Sleep Timer Hidden Tricks:</strong> You probably know about the sleep timer in Spotify (tap the three dots → Sleep Timer), but here is what most people miss — you can set it to <strong>"End of Track"</strong> instead of a fixed time. This is perfect for falling asleep to a podcast or audiobook episode. The playback stops exactly when the current track ends rather than cutting off mid-sentence at an arbitrary minute mark.</p>
+                        <p><strong>Private Session Mode for Stealth Listening:</strong> Tap the gear icon in Settings and toggle on <strong>Private Session</strong>. While active, nothing you listen to appears in your listening activity, your followers cannot see your current track, and it does not influence your Discover Weekly or Daily Mix algorithms. This is incredibly useful when you want to explore guilty-pleasure genres without your recommendations getting thrown off for weeks.</p>
+                        <p><strong>Queue Management Power Moves:</strong> Long-press any song and select <strong>"Add to Queue"</strong> — but here is the trick most people miss. You can reorder queued tracks by tapping the queue icon (bottom-right of Now Playing), then dragging songs up or down. You can also swipe to remove individual tracks from the queue without clearing the entire thing. Think of it as building your own real-time DJ set.</p>
+                        <p><strong>Automate with Tasker and Google Assistant Routines:</strong> If you use <strong>Tasker</strong>, you can create automation profiles like "when I connect to my car's Bluetooth, open Spotify and resume the last playlist." With Google Assistant Routines (Settings → Google → All Services → Assistant → Routines), you can set morning triggers like "At 7 AM, play my Wake Up playlist on the bedroom speaker." These automations make the mod feel like it reads your mind.</p>
+                        <p><strong>Normalize Audio Across Tracks:</strong> Not every song is mastered at the same volume — jumping from a quiet indie track to a loud EDM banger can be jarring. Go to Settings → Playback → <strong>Enable Normalize Volume</strong>, then choose between Quiet, Normal, or Loud presets. This evens out volume differences across your entire library so you never have to scramble for the volume buttons between tracks.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Device Compatibility Matrix Section -->
+        <section class="details-section" aria-labelledby="comparison-heading">
+            <div class="container">
+                <div class="details-grid">
+                    <article class="detail-card">
+                        <div class="detail-card__header">
+                            <div class="detail-card__icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="18" y1="20" x2="18" y2="10"/>
+                                    <line x1="12" y1="20" x2="12" y2="4"/>
+                                    <line x1="6" y1="20" x2="6" y2="14"/>
+                                </svg>
+                            </div>
+                            <h2 id="comparison-heading" class="detail-card__title">Tested Device Compatibility – Does It Run on Your Phone?</h2>
+                        </div>
+                        <p>We test every build across a wide range of devices before publishing. Here is the current compatibility status based on our internal testing and community feedback. If your device or brand is not listed below, chances are it will still work — as long as it runs <strong>Android 5.0+</strong>, you are good to go.</p>
+                        <div class="table-responsive">
+                            <table class="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>Brand / Device Type</th>
+                                        <th>Models Tested</th>
+                                        <th class="highlight">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Samsung Galaxy</strong></td>
+                                        <td>S24 Ultra, S23, A54, A15, Z Fold 5, Z Flip 5</td>
+                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Google Pixel</strong></td>
+                                        <td>Pixel 8 Pro, Pixel 8a, Pixel 7, Pixel 6a</td>
+                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>OnePlus</strong></td>
+                                        <td>12, 12R, Nord CE 4, Nord N30</td>
+                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Xiaomi / Redmi / POCO</strong></td>
+                                        <td>14 Ultra, Redmi Note 13 Pro, POCO F6</td>
+                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Realme / OPPO / Vivo</strong></td>
+                                        <td>GT 5 Pro, Reno 11, V30, iQOO 12</td>
+                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Motorola</strong></td>
+                                        <td>Edge 50, Razr 2024, Moto G Power</td>
+                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Android Tablets</strong></td>
+                                        <td>Galaxy Tab S9, Pixel Tablet, Lenovo Tab P12</td>
+                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Chromebooks</strong></td>
+                                        <td>Acer Chromebook, Lenovo Duet, HP Chromebook</td>
+                                        <td class="highlight"><span class="comparison-check">✅ Works via Sideload</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Foldable Devices</strong></td>
+                                        <td>Galaxy Z Fold 5, Z Flip 5, Pixel Fold</td>
+                                        <td class="highlight"><span class="comparison-check">✅ Adapts to Both Screens</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Custom ROMs</strong></td>
+                                        <td>LineageOS 21, Pixel Experience, crDroid</td>
+                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Foldable devices deserve a special mention — <strong>Spotify Mod APK</strong> seamlessly adapts its layout when you unfold your phone. On the Galaxy Z Fold 5, the inner display shows an expanded library view with album art grids, while folding back to the cover screen switches to a compact Now Playing view. Android's multi-window APIs handle this automatically, and the experience feels truly premium.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Benchmarks Section -->
+        <section class="details-section" aria-labelledby="requirements-heading">
+            <div class="container">
+                <div class="details-grid">
+                    <article class="detail-card">
+                        <div class="detail-card__header">
+                            <div class="detail-card__icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"/>
+                                </svg>
+                            </div>
+                            <h2 id="requirements-heading" class="detail-card__title">Real-World Performance Benchmarks on Popular Android Devices</h2>
+                        </div>
+                        <p>Spec sheets only tell half the story. What actually matters is how the app <strong>feels</strong> on your specific device. We benchmarked <strong>Spotify Mod APK</strong> across flagships and budget phones to give you real numbers. Here is how it performed in our controlled tests with 320kbps streaming, Wi-Fi connected, screen brightness at 50%.</p>
+                        <div class="table-wrapper">
+                            <table class="detail-card__table">
+                                <thead>
+                                    <tr>
+                                        <th>Device</th>
+                                        <th>Cold Start</th>
+                                        <th>RAM Usage</th>
+                                        <th>Battery / Hour</th>
+                                        <th>Rating</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Samsung Galaxy S24 Ultra</strong></td>
+                                        <td>1.2s</td>
+                                        <td>185 MB</td>
+                                        <td>3.1%</td>
+                                        <td>⭐ Excellent</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Google Pixel 8</strong></td>
+                                        <td>1.4s</td>
+                                        <td>172 MB</td>
+                                        <td>3.4%</td>
+                                        <td>⭐ Excellent</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>OnePlus 12</strong></td>
+                                        <td>1.1s</td>
+                                        <td>178 MB</td>
+                                        <td>2.9%</td>
+                                        <td>⭐ Excellent</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Xiaomi 14</strong></td>
+                                        <td>1.3s</td>
+                                        <td>190 MB</td>
+                                        <td>3.2%</td>
+                                        <td>⭐ Excellent</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Redmi Note 13 Pro</strong></td>
+                                        <td>2.1s</td>
+                                        <td>165 MB</td>
+                                        <td>4.8%</td>
+                                        <td>⭐ Very Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Samsung Galaxy A15</strong></td>
+                                        <td>3.4s</td>
+                                        <td>152 MB</td>
+                                        <td>5.6%</td>
+                                        <td>⭐ Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Motorola Moto G Power</strong></td>
+                                        <td>3.8s</td>
+                                        <td>148 MB</td>
+                                        <td>4.2%</td>
+                                        <td>⭐ Good</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>As you can see, flagship devices with <strong>Snapdragon 8 Gen 3</strong> or <strong>Google Tensor G3</strong> chipsets launch the app in just over one second, while budget phones with MediaTek Dimensity or Helio processors take roughly 3 to 4 seconds. RAM usage stays under <strong>200 MB</strong> across the board, which means even devices with 3 GB of RAM run the mod comfortably alongside other apps.</p>
+                        <p>Battery drain is the metric most people care about for a music app, and the results are excellent. On flagships, you lose roughly <strong>3% per hour</strong> of continuous 320kbps streaming — that means a full day of listening on a 5,000 mAh battery. Budget devices consume a bit more due to less efficient processors, but even the Galaxy A15 manages over 17 hours of continuous playback on a full charge. That is more than enough for anyone.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- Version History Section -->
         <section class="details-section" aria-labelledby="version-heading">
             <div class="container">
@@ -2551,392 +2939,6 @@
             </div>
         </section>
 
-        <!-- Android-Exclusive Advantages Section -->
-        <section class="details-section" aria-labelledby="whats-new-heading">
-            <div class="container">
-                <div class="details-grid">
-                    <article class="detail-card">
-                        <div class="detail-card__header">
-                            <div class="detail-card__icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 20V10"/>
-                                    <path d="M18 20V4"/>
-                                    <path d="M6 20v-4"/>
-                                </svg>
-                            </div>
-                            <h2 id="whats-new-heading" class="detail-card__title">Android-Exclusive Perks You Will Not Find on Any Other Platform</h2>
-                        </div>
-                        <p>Android is not just compatible with Spotify Mod APK — it is the <strong>ideal platform</strong> for it. The operating system offers a handful of integrations and capabilities that make the listening experience on Android genuinely superior to what you would get on iOS, Mac, or Windows. Here is what you unlock exclusively on Android.</p>
-                        <p><strong>Home Screen Widgets:</strong> Long-press your home screen, tap Widgets, and drag over a Spotify widget. You get a beautiful <strong>4×1 Now Playing bar</strong> that shows album art, track title, and artist name alongside play, pause, and skip controls. There is also a smaller 4×1 minimal control strip for those who prefer a cleaner launcher. No need to open the app at all — just glance at your home screen and tap play.</p>
-                        <p><strong>Android Auto Integration:</strong> Plug your phone into your car's USB port or connect wirelessly, and <strong>Spotify Mod APK</strong> appears right on your infotainment display. Browse your playlists, jump between podcasts, and control playback with steering wheel buttons or voice commands. The interface is optimized for at-a-glance readability while driving, complete with large album art and minimal text. Rightly so — your eyes belong on the road, not your phone.</p>
-                        <p><strong>Wear OS Smartwatch Control:</strong> If you own a <strong>Samsung Galaxy Watch</strong>, <strong>Google Pixel Watch</strong>, or any Wear OS device, you can control Spotify Mod playback directly from your wrist. Pause, skip, adjust volume, and even see what is playing — all without reaching for your phone. It is perfect for workouts, runs, or those moments when your phone is across the room.</p>
-                        <p><strong>Split-Screen Multitasking:</strong> Android lets you snap Spotify into a split-screen window alongside another app. Browse Reddit, reply to messages, or watch a tutorial video while your music keeps playing in a visible mini-window at the bottom of your screen. Try doing that on an iPhone, no chance.</p>
-                        <p><strong>SD Card Storage for Offline Downloads:</strong> Running low on internal storage? Android lets you redirect Spotify's offline downloads to an <strong>external SD card</strong>. Head to Settings → Storage inside the app, and select your SD card as the download location. This is a lifesaver for devices with 32 GB or 64 GB of internal storage where space is always at a premium. You could easily store <strong>5,000+ songs</strong> on a cheap 32 GB microSD without touching your phone's main storage.</p>
-                        <p><strong>Quick Settings Playback Tile:</strong> Swipe down from the top of your screen and you will see a media control tile right in your Quick Settings panel. Play, pause, skip, and see the current track — all without leaving whatever app you are currently using. Android's media session integration means this tile activates automatically the moment you start playing anything in Spotify Mod.</p>
-                        <p><strong>Rich Notification Controls:</strong> Android's notification shade gives you a <strong>full media player</strong> when Spotify Mod is active. You see album artwork, track and artist info, a seek bar, and controls for previous, play/pause, next, and like. On Android 13 and above, the notification even features a smooth animated waveform that matches your music. It is genuinely beautiful and functional at the same time.</p>
-                        <p><strong>Google Assistant Voice Control:</strong> Set Spotify as your default music provider in Google Assistant settings, and you unlock hands-free control everywhere. Say "Hey Google, play my Discover Weekly" or "Hey Google, shuffle my liked songs" and it just works — on your phone, Nest speaker, or any Google-powered device. This deep voice integration is an Android-exclusive advantage that makes the mod feel even more native.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Installation Guide for Every Android Version -->
-        <section class="howto" aria-labelledby="howto-heading">
-            <div class="container">
-                <h2 id="howto-heading" class="section-title">Installing Spotify Mod APK on Every Android Version</h2>
-                <div class="howto__steps">
-                    <div class="step">
-                        <span class="step__number">1</span>
-                        <h3 class="step__title">Enable Sideloading (Path Varies by Android Version)</h3>
-                        <p class="step__desc"><strong>Android 14/13/12:</strong> Go to Settings → Apps → Special App Access → Install Unknown Apps → select your browser → toggle Allow. <strong>Android 11/10:</strong> Settings → Apps & Notifications → Advanced → Special App Access → Install Unknown Apps. <strong>Android 9 and below:</strong> Settings → Security → toggle "Unknown Sources" globally. On Samsung One UI, the path is Settings → Biometrics and Security → Install Unknown Apps.</p>
-                    </div>
-                    <div class="step">
-                        <span class="step__number">2</span>
-                        <h3 class="step__title">Remove the Official Spotify App Completely</h3>
-                        <p class="step__desc">This is a mandatory step that most people skip, and then wonder why installation fails. Go to Settings → Apps → Spotify → Uninstall. On Xiaomi MIUI, also clear residual data from Security → Cleaner. On Samsung, check Secure Folder too — if Spotify is cloned there, remove it as well. Android blocks two apps with the same package name signed by different certificates.</p>
-                    </div>
-                    <div class="step">
-                        <span class="step__number">3</span>
-                        <h3 class="step__title">Download the APK and Verify the File</h3>
-                        <p class="step__desc">Tap the download button on this page. Once the file finishes downloading, check the file size matches what is listed in the version history below — a mismatched size could indicate an incomplete download. If your browser shows a "harmful file" warning, that is a generic Android warning for all sideloaded APKs and can be safely dismissed for files downloaded from our official website.</p>
-                    </div>
-                    <div class="step">
-                        <span class="step__number">4</span>
-                        <h3 class="step__title">Install the APK File</h3>
-                        <p class="step__desc">Open the downloaded APK from your notification bar or file manager. Tap "Install" and wait for the process to complete — it typically takes under 30 seconds. On Android 14 devices, you may see an additional "Scan app" prompt from Google Play Protect; you can choose "Install anyway" since Play Protect flags all sideloaded APKs regardless of their actual safety status.</p>
-                    </div>
-                    <div class="step">
-                        <span class="step__number">5</span>
-                        <h3 class="step__title">First Launch Settings You Should Configure Immediately</h3>
-                        <p class="step__desc">Open the app and log in with your Spotify credentials (email and password works best — avoid social logins for the first sign-in). Then go to Settings → Audio Quality and set both Wi-Fi and Mobile streaming to Very High (320kbps). Next, navigate to Settings → Storage and choose your preferred download location (internal or SD card). Finally, go to your phone's Settings → Apps → Spotify Mod → Battery → set to Unrestricted to prevent Android's battery optimizer from killing playback.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Troubleshooting Android-Specific Issues Section -->
-        <section class="details-section" aria-labelledby="troubleshooting-heading">
-            <div class="container">
-                <div class="details-grid">
-                    <article class="detail-card">
-                        <div class="detail-card__header">
-                            <div class="detail-card__icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                                </svg>
-                            </div>
-                            <h2 id="troubleshooting-heading" class="detail-card__title">Troubleshooting Android-Specific Issues</h2>
-                        </div>
-                        <div class="detail-card__faq">
-                            <details class="detail-card__faq-item">
-                                <summary>"Parse Error" During Installation</summary>
-                                <div class="detail-card__faq-answer">
-                                    <p><strong>Solution:</strong> A parse error means your Android version is too old for the APK, or the file downloaded incompletely. First, check that your device runs Android 5.0 or higher (Settings → About Phone → Android Version). If your version is compatible, delete the downloaded file and re-download it — partial downloads over unstable connections are the most common cause. On MIUI devices, also try disabling "MIUI Optimization" in Developer Options temporarily.</p>
-                                </div>
-                            </details>
-                            <details class="detail-card__faq-item">
-                                <summary>Notification Controls Not Appearing</summary>
-                                <div class="detail-card__faq-answer">
-                                    <p><strong>Solution:</strong> Go to Settings → Apps → Spotify Mod → Notifications and make sure all notification categories are enabled, especially "Media Playback." On Samsung One UI, also check Settings → Notifications → Advanced Settings and ensure "Show media on Quick Panel" is turned on. On Android 13+, you need to grant the notification permission when the app first asks — if you denied it accidentally, go to App Info → Permissions → Notifications → Allow.</p>
-                                </div>
-                            </details>
-                            <details class="detail-card__faq-item">
-                                <summary>Audio Stops When Screen Locks</summary>
-                                <div class="detail-card__faq-answer">
-                                    <p><strong>Solution:</strong> This is caused by aggressive battery optimization killing background processes. Go to Settings → Apps → Spotify Mod → Battery → Unrestricted. On Xiaomi, open Security app → Battery Saver → App Battery Saver → Spotify Mod → No Restrictions, and also toggle on Autostart. On Huawei/Honor, go to Phone Manager → App Launch → set Spotify Mod to Manage Manually and enable all three toggles (Auto-launch, Secondary Launch, Run in Background).</p>
-                                </div>
-                            </details>
-                            <details class="detail-card__faq-item">
-                                <summary>Downloads Fail or Disappear from SD Card</summary>
-                                <div class="detail-card__faq-answer">
-                                    <p><strong>Solution:</strong> Android's scoped storage on newer versions can cause issues with external storage writes. Make sure your SD card is formatted as "Portable Storage," not "Adoptable Storage." Go into Spotify Mod → Settings → Storage and re-select the SD card path. If downloads keep vanishing, try switching back to internal storage, downloading the playlist, then moving the storage location — the app will migrate existing files.</p>
-                                </div>
-                            </details>
-                            <details class="detail-card__faq-item">
-                                <summary>Spotify Connect Cannot Find Other Devices</summary>
-                                <div class="detail-card__faq-answer">
-                                    <p><strong>Solution:</strong> Spotify Connect requires all devices to be on the same Wi-Fi network. Check that your phone's Wi-Fi is connected to the same router as your speaker or laptop. On some Android skins, "Wi-Fi isolation" or "AP isolation" is enabled by default in router or hotspot settings — disable it. Also, make sure Spotify Mod has the "Nearby Devices" permission enabled in Settings → Apps → Spotify Mod → Permissions.</p>
-                                </div>
-                            </details>
-                            <details class="detail-card__faq-item">
-                                <summary>Random Force Closes on Android 14</summary>
-                                <div class="detail-card__faq-answer">
-                                    <p><strong>Solution:</strong> Android 14 introduced stricter background process limits and new permission models that can conflict with older mod builds. Make sure you are running the latest version of the mod from this page. If crashes persist, clear both cache and data (Settings → Apps → Spotify Mod → Storage → Clear Cache, then Clear Data), reinstall the APK, and log back in. Also check that Google Play Protect is not interfering — go to Play Store → Profile → Play Protect → Settings → toggle off "Scan apps with Play Protect" temporarily during setup.</p>
-                                </div>
-                            </details>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-        
-        <!-- APK Integrity Verification Section -->
-        <section class="details-section" aria-labelledby="safety-heading">
-            <div class="container">
-                <div class="details-grid">
-                    <article class="detail-card">
-                        <div class="detail-card__header">
-                            <div class="detail-card__icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                </svg>
-                            </div>
-                            <h2 id="safety-heading" class="detail-card__title">APK Integrity Verification — How to Confirm You Got a Clean File</h2>
-                        </div>
-                        <p>Trust is earned, not assumed. Before you install any APK from any source — including ours — you should know how to verify its integrity yourself. Here is a straightforward guide to confirming that the file on your device is exactly what we published, byte for byte.</p>
-                        <div class="safety-grid">
-                            <div class="safety-item">
-                                <div class="safety-item__icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                        <path d="M9 12l2 2 4-4"/>
-                                    </svg>
-                                </div>
-                                <div class="safety-item__content">
-                                    <div class="safety-item__title">SHA-256 Checksum Verification</div>
-                                    <div class="safety-item__desc">Use a file hash checker app from the Play Store or run <code>sha256sum</code> in Termux to generate the hash of your downloaded APK. Compare it against the checksum we publish alongside every release. A matching hash guarantees the file has not been tampered with during download.</div>
-                                </div>
-                            </div>
-                            <div class="safety-item">
-                                <div class="safety-item__icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                                        <path d="M9 12l2 2 4-4"/>
-                                    </svg>
-                                </div>
-                                <div class="safety-item__content">
-                                    <div class="safety-item__title">VirusTotal Multi-Engine Scan</div>
-                                    <div class="safety-item__desc">Upload the APK to <strong>VirusTotal.com</strong>, which scans it against 64+ antivirus engines simultaneously. Our builds consistently return <strong>0/64 detections</strong>. If any engine flags it, the report will tell you whether it is a false positive from heuristic analysis or a genuine concern. Always check for yourself.</div>
-                                </div>
-                            </div>
-                            <div class="safety-item">
-                                <div class="safety-item__icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                                    </svg>
-                                </div>
-                                <div class="safety-item__content">
-                                    <div class="safety-item__title">Permission Audit vs Official App</div>
-                                    <div class="safety-item__desc">After installation, go to Settings → Apps → Spotify Mod → Permissions and review every granted permission. The mod should request the same or fewer permissions than the official Spotify app — microphone (for voice search), storage (for offline downloads), notifications, and nearby devices. If you see unusual requests like SMS or phone access, the file is not from us.</div>
-                                </div>
-                            </div>
-                            <div class="safety-item">
-                                <div class="safety-item__icon">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M9 12l2 2 4-4"/>
-                                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="safety-item__content">
-                                    <div class="safety-item__title">APK Signature Consistency</div>
-                                    <div class="safety-item__desc">Each of our releases is signed with the same private certificate. Use an app like <strong>APK Analyzer</strong> or <strong>Apktool</strong> to check the signer certificate fingerprint. If you are updating from a previous version and the signatures match, Android will install it directly over the old build — a mismatched signature means the file came from a different source.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Device Compatibility Matrix Section -->
-        <section class="details-section" aria-labelledby="comparison-heading">
-            <div class="container">
-                <div class="details-grid">
-                    <article class="detail-card">
-                        <div class="detail-card__header">
-                            <div class="detail-card__icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <line x1="18" y1="20" x2="18" y2="10"/>
-                                    <line x1="12" y1="20" x2="12" y2="4"/>
-                                    <line x1="6" y1="20" x2="6" y2="14"/>
-                                </svg>
-                            </div>
-                            <h2 id="comparison-heading" class="detail-card__title">Tested Device Compatibility – Does It Run on Your Phone?</h2>
-                        </div>
-                        <p>We test every build across a wide range of devices before publishing. Here is the current compatibility status based on our internal testing and community feedback. If your device or brand is not listed below, chances are it will still work — as long as it runs <strong>Android 5.0+</strong>, you are good to go.</p>
-                        <div class="table-responsive">
-                            <table class="comparison-table">
-                                <thead>
-                                    <tr>
-                                        <th>Brand / Device Type</th>
-                                        <th>Models Tested</th>
-                                        <th class="highlight">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Samsung Galaxy</strong></td>
-                                        <td>S24 Ultra, S23, A54, A15, Z Fold 5, Z Flip 5</td>
-                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Google Pixel</strong></td>
-                                        <td>Pixel 8 Pro, Pixel 8a, Pixel 7, Pixel 6a</td>
-                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>OnePlus</strong></td>
-                                        <td>12, 12R, Nord CE 4, Nord N30</td>
-                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Xiaomi / Redmi / POCO</strong></td>
-                                        <td>14 Ultra, Redmi Note 13 Pro, POCO F6</td>
-                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Realme / OPPO / Vivo</strong></td>
-                                        <td>GT 5 Pro, Reno 11, V30, iQOO 12</td>
-                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Motorola</strong></td>
-                                        <td>Edge 50, Razr 2024, Moto G Power</td>
-                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Android Tablets</strong></td>
-                                        <td>Galaxy Tab S9, Pixel Tablet, Lenovo Tab P12</td>
-                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Chromebooks</strong></td>
-                                        <td>Acer Chromebook, Lenovo Duet, HP Chromebook</td>
-                                        <td class="highlight"><span class="comparison-check">✅ Works via Sideload</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Foldable Devices</strong></td>
-                                        <td>Galaxy Z Fold 5, Z Flip 5, Pixel Fold</td>
-                                        <td class="highlight"><span class="comparison-check">✅ Adapts to Both Screens</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Custom ROMs</strong></td>
-                                        <td>LineageOS 21, Pixel Experience, crDroid</td>
-                                        <td class="highlight"><span class="comparison-check">✅ Fully Working</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p>Foldable devices deserve a special mention — <strong>Spotify Mod APK</strong> seamlessly adapts its layout when you unfold your phone. On the Galaxy Z Fold 5, the inner display shows an expanded library view with album art grids, while folding back to the cover screen switches to a compact Now Playing view. Android's multi-window APIs handle this automatically, and the experience feels truly premium.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Performance Benchmarks Section -->
-        <section class="details-section" aria-labelledby="requirements-heading">
-            <div class="container">
-                <div class="details-grid">
-                    <article class="detail-card">
-                        <div class="detail-card__header">
-                            <div class="detail-card__icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-                                    <line x1="12" y1="18" x2="12.01" y2="18"/>
-                                </svg>
-                            </div>
-                            <h2 id="requirements-heading" class="detail-card__title">Real-World Performance Benchmarks on Popular Android Devices</h2>
-                        </div>
-                        <p>Spec sheets only tell half the story. What actually matters is how the app <strong>feels</strong> on your specific device. We benchmarked <strong>Spotify Mod APK</strong> across flagships and budget phones to give you real numbers. Here is how it performed in our controlled tests with 320kbps streaming, Wi-Fi connected, screen brightness at 50%.</p>
-                        <div class="table-wrapper">
-                            <table class="detail-card__table">
-                                <thead>
-                                    <tr>
-                                        <th>Device</th>
-                                        <th>Cold Start</th>
-                                        <th>RAM Usage</th>
-                                        <th>Battery / Hour</th>
-                                        <th>Rating</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Samsung Galaxy S24 Ultra</strong></td>
-                                        <td>1.2s</td>
-                                        <td>185 MB</td>
-                                        <td>3.1%</td>
-                                        <td>⭐ Excellent</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Google Pixel 8</strong></td>
-                                        <td>1.4s</td>
-                                        <td>172 MB</td>
-                                        <td>3.4%</td>
-                                        <td>⭐ Excellent</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>OnePlus 12</strong></td>
-                                        <td>1.1s</td>
-                                        <td>178 MB</td>
-                                        <td>2.9%</td>
-                                        <td>⭐ Excellent</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Xiaomi 14</strong></td>
-                                        <td>1.3s</td>
-                                        <td>190 MB</td>
-                                        <td>3.2%</td>
-                                        <td>⭐ Excellent</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Redmi Note 13 Pro</strong></td>
-                                        <td>2.1s</td>
-                                        <td>165 MB</td>
-                                        <td>4.8%</td>
-                                        <td>⭐ Very Good</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Samsung Galaxy A15</strong></td>
-                                        <td>3.4s</td>
-                                        <td>152 MB</td>
-                                        <td>5.6%</td>
-                                        <td>⭐ Good</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Motorola Moto G Power</strong></td>
-                                        <td>3.8s</td>
-                                        <td>148 MB</td>
-                                        <td>4.2%</td>
-                                        <td>⭐ Good</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p>As you can see, flagship devices with <strong>Snapdragon 8 Gen 3</strong> or <strong>Google Tensor G3</strong> chipsets launch the app in just over one second, while budget phones with MediaTek Dimensity or Helio processors take roughly 3 to 4 seconds. RAM usage stays under <strong>200 MB</strong> across the board, which means even devices with 3 GB of RAM run the mod comfortably alongside other apps.</p>
-                        <p>Battery drain is the metric most people care about for a music app, and the results are excellent. On flagships, you lose roughly <strong>3% per hour</strong> of continuous 320kbps streaming — that means a full day of listening on a 5,000 mAh battery. Budget devices consume a bit more due to less efficient processors, but even the Galaxy A15 manages over 17 hours of continuous playback on a full charge. That is more than enough for anyone.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Power User Secrets Section -->
-        <section class="details-section" aria-labelledby="tips-heading">
-            <div class="container">
-                <div class="details-grid">
-                    <article class="detail-card">
-                        <div class="detail-card__header">
-                            <div class="detail-card__icon">
-                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/>
-                                    <line x1="9" y1="21" x2="15" y2="21"/>
-                                </svg>
-                            </div>
-                            <h2 id="tips-heading" class="detail-card__title">Power User Secrets — Hidden Settings Most People Never Find</h2>
-                        </div>
-                        <p>You have the mod installed, the audio quality is maxed out, and your playlists are downloaded. But there is a whole layer of hidden functionality that <strong>99% of users</strong> never discover. These techniques go beyond the basics and will genuinely transform your experience.</p>
-                        <p><strong>Force LDAC Bluetooth Codec via Developer Options:</strong> By default, Android uses SBC or AAC for Bluetooth audio, both of which compress your 320kbps stream down to roughly 200kbps or less. To fix this, enable Developer Options (tap Build Number 7 times in About Phone), then go to Developer Options → Bluetooth Audio Codec → select <strong>LDAC</strong>. This transmits at up to <strong>990kbps</strong>, preserving every detail of your high-quality Spotify stream. Not all headphones support it, but if yours do, the difference is staggering.</p>
-                        <p><strong>Disable Bluetooth Absolute Volume:</strong> Ever frustrated that your phone's volume and headphone volume are locked together? In Developer Options, toggle off <strong>"Disable Absolute Volume."</strong> This separates the two volume controls so you can fine-tune phone output and headphone output independently. It is a small change that makes a surprisingly large difference, especially with third-party Bluetooth speakers that have their own volume curve.</p>
-                        <p><strong>Sleep Timer Hidden Tricks:</strong> You probably know about the sleep timer in Spotify (tap the three dots → Sleep Timer), but here is what most people miss — you can set it to <strong>"End of Track"</strong> instead of a fixed time. This is perfect for falling asleep to a podcast or audiobook episode. The playback stops exactly when the current track ends rather than cutting off mid-sentence at an arbitrary minute mark.</p>
-                        <p><strong>Private Session Mode for Stealth Listening:</strong> Tap the gear icon in Settings and toggle on <strong>Private Session</strong>. While active, nothing you listen to appears in your listening activity, your followers cannot see your current track, and it does not influence your Discover Weekly or Daily Mix algorithms. This is incredibly useful when you want to explore guilty-pleasure genres without your recommendations getting thrown off for weeks.</p>
-                        <p><strong>Queue Management Power Moves:</strong> Long-press any song and select <strong>"Add to Queue"</strong> — but here is the trick most people miss. You can reorder queued tracks by tapping the queue icon (bottom-right of Now Playing), then dragging songs up or down. You can also swipe to remove individual tracks from the queue without clearing the entire thing. Think of it as building your own real-time DJ set.</p>
-                        <p><strong>Automate with Tasker and Google Assistant Routines:</strong> If you use <strong>Tasker</strong>, you can create automation profiles like "when I connect to my car's Bluetooth, open Spotify and resume the last playlist." With Google Assistant Routines (Settings → Google → All Services → Assistant → Routines), you can set morning triggers like "At 7 AM, play my Wake Up playlist on the bedroom speaker." These automations make the mod feel like it reads your mind.</p>
-                        <p><strong>Normalize Audio Across Tracks:</strong> Not every song is mastered at the same volume — jumping from a quiet indie track to a loud EDM banger can be jarring. Go to Settings → Playback → <strong>Enable Normalize Volume</strong>, then choose between Quiet, Normal, or Loud presets. This evens out volume differences across your entire library so you never have to scramble for the volume buttons between tracks.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-        
         <!-- FAQ Section -->
         <section class="details-section" aria-labelledby="faq-heading">
             <div class="container">
@@ -3018,7 +3020,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Final Words Section -->
         <section class="details-section" aria-labelledby="final-words-heading">
             <div class="container">
