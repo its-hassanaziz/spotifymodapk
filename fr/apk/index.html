@@ -81,11 +81,11 @@
     
     <!-- Critical CSS Inlined -->
     <style>
-        /* Prevent lang-switcher FOUC and mobile nav flash */
+        /* Prevent FOUC: lang-switcher, nav, phone mockup */
         .lang-switcher__dropdown{opacity:0;visibility:hidden;position:absolute}
         .lang-switcher{position:relative;display:flex;align-items:center}
         .nav{display:flex;align-items:center}
-        @media(max-width:1023px){.nav{flex-direction:column;position:fixed;top:0;right:0;width:280px;max-width:85vw;height:100vh;background:#121212;transform:translateX(100%);visibility:hidden;z-index:99999;overflow-y:auto;padding:80px 1.5rem 1.5rem}.lang-switcher{width:100%}.lang-switcher__dropdown{position:static!important;min-width:100%;border:none;background:rgba(255,255,255,.04);box-shadow:none;transform:none;max-height:0;overflow:hidden;padding:0}}
+        @media(max-width:1023px){.nav{flex-direction:column;position:fixed;top:0;right:0;width:280px;max-width:85vw;height:100vh;background:#121212;transform:translateX(100%);visibility:hidden;z-index:99999;overflow-y:auto;padding:80px 1.5rem 1.5rem}.lang-switcher{order:-1;width:100%;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:8px;margin-bottom:8px}.lang-switcher__dropdown{position:static!important;min-width:100%;border:none;background:rgba(255,255,255,.04);box-shadow:none;transform:none;max-height:0;overflow:hidden;padding:0;opacity:1;visibility:visible}}
         :root {
             --color-primary: #1DB954;
             --color-bg-dark: #121212;

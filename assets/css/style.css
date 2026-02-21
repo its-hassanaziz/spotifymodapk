@@ -2213,13 +2213,17 @@ p {
     border-radius: 2px;
 }
 
-/* Mobile: lang-switcher inside nav drawer, below Contact Us */
+/* Mobile: lang-switcher at top of nav drawer */
 @media (max-width: 1023px) {
     .lang-switcher {
+        order: -1;
         width: 100%;
-        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        border-top: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         margin-top: 0;
         padding-top: 0;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
     }
 
     .lang-switcher__toggle {

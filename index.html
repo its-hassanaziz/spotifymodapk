@@ -93,11 +93,18 @@
     
     <!-- Critical CSS Inlined for LCP - System fonts for max performance -->
     <style>
-        /* Prevent lang-switcher FOUC and mobile nav flash */
+        /* Prevent FOUC: lang-switcher, nav, phone mockup */
         .lang-switcher__dropdown{opacity:0;visibility:hidden;position:absolute}
         .lang-switcher{position:relative;display:flex;align-items:center}
         .nav{display:flex;align-items:center}
-        @media(max-width:1023px){.nav{flex-direction:column;position:fixed;top:0;right:0;width:280px;max-width:85vw;height:100vh;background:#121212;transform:translateX(100%);visibility:hidden;z-index:99999;overflow-y:auto;padding:80px 1.5rem 1.5rem}.lang-switcher{width:100%}.lang-switcher__dropdown{position:static!important;min-width:100%;border:none;background:rgba(255,255,255,.04);box-shadow:none;transform:none;max-height:0;overflow:hidden;padding:0}}
+        .hero__visual{max-width:280px;margin:0 auto}
+        .phone-mockup{position:relative;width:200px;height:400px;max-width:100%;margin:0 auto;overflow:hidden}
+        .phone-frame{position:relative;width:100%;height:100%;overflow:hidden;border-radius:30px;padding:9px}
+        .phone-slider{position:relative;width:100%;height:100%;border-radius:24px;overflow:hidden}
+        .phone-slider__track{position:relative;width:100%;height:100%}
+        .phone-slider__slide{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:24px;opacity:0}
+        .phone-slider__slide--active{opacity:1}
+        @media(max-width:1023px){.nav{flex-direction:column;position:fixed;top:0;right:0;width:280px;max-width:85vw;height:100vh;background:#121212;transform:translateX(100%);visibility:hidden;z-index:99999;overflow-y:auto;padding:80px 1.5rem 1.5rem}.lang-switcher{order:-1;width:100%;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:8px;margin-bottom:8px}.lang-switcher__dropdown{position:static!important;min-width:100%;border:none;background:rgba(255,255,255,.04);box-shadow:none;transform:none;max-height:0;overflow:hidden;padding:0;opacity:1;visibility:visible}.hero__visual{display:block!important;max-width:380px!important;width:90%!important;margin:0 auto!important}.phone-mockup{width:100%!important;max-width:280px!important;height:auto!important;aspect-ratio:9/19!important}}
         :root {
             --color-primary: #1DB954;
             --color-bg-dark: #121212;
@@ -1103,10 +1110,14 @@
                 touch-action: none;
             }
 
-            /* Lang-switcher inside mobile drawer */
+            /* Lang-switcher at top of mobile drawer */
             .lang-switcher {
+                order: -1;
                 width: 100%;
-                border-top: 1px solid rgba(255, 255, 255, 0.06);
+                border-top: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+                padding-bottom: 8px;
+                margin-bottom: 8px;
             }
             .lang-switcher__toggle {
                 width: 100%;
