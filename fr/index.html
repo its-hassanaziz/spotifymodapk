@@ -66,10 +66,10 @@
     <link rel="dns-prefetch" href="https://spotifymod.com">
     
     <!-- Favicon & Icons -->
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="icon" type="image/webp" href="/logo.webp">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/logo.webp">
     <link rel="manifest" href="../manifest.json">
     <!-- IMPORTANT: The manifest.json references icon files that MUST exist at these paths:
          /assets/images/icon-72x72.png
@@ -92,6 +92,10 @@
     <link rel="alternate" hreflang="de" href="https://spotifymod.com/de/">
     <link rel="alternate" hreflang="id" href="https://spotifymod.com/id/">
     <link rel="alternate" hreflang="it" href="https://spotifymod.com/it/">
+    <link rel="alternate" hreflang="pt-BR" href="https://spotifymod.com/pt-br/">
+    <link rel="alternate" hreflang="es" href="https://spotifymod.com/es/">
+    <link rel="alternate" hreflang="tr" href="https://spotifymod.com/tr/">
+    <link rel="alternate" hreflang="vi" href="https://spotifymod.com/vi/">
     <link rel="alternate" hreflang="x-default" href="https://spotifymod.com/">
     
     <!-- Critical CSS Inlined for LCP - System fonts for max performance -->
@@ -108,7 +112,7 @@
         .phone-slider__slide{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:24px;opacity:0}
         .phone-slider__slide--active{opacity:1}
         .lang-switcher__toggle:hover,.lang-switcher__toggle:focus{background:transparent}
-        @media(max-width:1023px){.nav{flex-direction:column;position:fixed;top:0;right:0;width:280px;max-width:85vw;height:100vh;background:#121212;transform:translateX(100%);visibility:hidden;z-index:99999;overflow-y:auto;overflow-x:hidden;padding:80px 1rem 1.5rem}.lang-switcher{order:-1;position:relative;width:100%;border-bottom:1px solid rgba(255,255,255,.08);padding:0 0 4px;margin:0 0 4px}.lang-switcher__toggle{width:100%;justify-content:flex-start;padding:8px 12px;min-height:44px}.lang-switcher__dropdown{position:absolute!important;top:100%;left:0;right:0;width:100%;background:#1e1e1e;border:1px solid rgba(255,255,255,.08);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.5);transform:none!important;max-height:0;overflow:hidden;padding:0;opacity:0;visibility:hidden;z-index:10;transition:max-height .25s ease,opacity .2s ease,visibility .2s ease,padding .25s ease}.lang-switcher.is-open .lang-switcher__dropdown{max-height:200px;padding:4px;opacity:1;visibility:visible}.hero__visual{display:block!important;max-width:380px!important;width:90%!important;margin:0 auto!important}.phone-mockup{width:100%!important;max-width:280px!important;height:auto!important;aspect-ratio:9/19!important}}
+        @media(max-width:1023px){.nav{flex-direction:column;position:fixed;top:0;right:0;width:280px;max-width:85vw;height:100vh;background:#121212;transform:translateX(100%);visibility:hidden;z-index:99999;overflow-y:auto;overflow-x:hidden;padding:80px 1rem 1.5rem}.lang-switcher{order:-1;position:relative;width:100%;border-bottom:1px solid rgba(255,255,255,.08);padding:0 0 4px;margin:0 0 4px}.lang-switcher__toggle{width:100%;justify-content:flex-start;padding:8px 12px;min-height:44px}.lang-switcher__dropdown{position:absolute!important;top:100%;left:0;right:0;width:100%;background:#1e1e1e;border:1px solid rgba(255,255,255,.08);border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.5);transform:none!important;max-height:0;overflow:hidden;padding:0;opacity:0;visibility:hidden;z-index:10;transition:max-height .25s ease,opacity .2s ease,visibility .2s ease,padding .25s ease}.lang-switcher.is-open .lang-switcher__dropdown{max-height:500px;padding:4px;opacity:1;visibility:visible}.hero__visual{display:block!important;max-width:380px!important;width:90%!important;margin:0 auto!important}.phone-mockup{width:100%!important;max-width:280px!important;height:auto!important;aspect-ratio:9/19!important}}
         :root {
             --color-primary: #1DB954;
             --color-bg-dark: #121212;
@@ -1155,7 +1159,7 @@
                 transition: max-height 0.25s ease, opacity 0.2s ease, visibility 0.2s ease, padding 0.25s ease;
             }
             .lang-switcher.is-open .lang-switcher__dropdown {
-                max-height: 200px;
+                max-height: 500px;
                 padding: 4px;
                 opacity: 1;
                 visibility: visible;
@@ -3176,10 +3180,7 @@
         <div class="container">
             <div class="header__inner">
                 <a href="./" class="logo" aria-label="Spotify Mod APK - Retour à l'accueil" itemprop="url">
-                    <svg class="logo__icon" width="40" height="40" viewBox="0 0 168 168" aria-hidden="true" focusable="false" role="img">
-                        <circle cx="84" cy="84" r="84" fill="#1DB954"/>
-                        <path d="M117.8 117.8c-1.4 2.3-4.4 3-6.7 1.6-18.4-11.2-41.5-13.8-68.7-7.5-2.6.6-5.3-.9-5.9-3.5-.6-2.6.9-5.3 3.5-5.9 29.8-6.8 55.4-3.9 76.2 8.7 2.3 1.3 3 4.3 1.6 6.6zm10.3-21.8c-1.8 2.9-5.6 3.8-8.5 2-21.1-13-53.3-16.8-78.3-9.2-3.2 1-6.6-0.8-7.6-4-1-3.2.8-6.6 4-7.6 28.5-8.6 64-4.5 88.4 10.5 2.9 1.8 3.8 5.5 2 8.3zm0.9-22.7c-25.3-15-67-16.4-91.2-9.1-3.9 1.2-8-1-9.2-4.9-1.2-3.9 1-8 4.9-9.2 27.7-8.4 73.8-6.8 102.9 10.5 3.5 2.1 4.6 6.6 2.5 10.1-2.1 3.4-6.6 4.6-10 2.6z" fill="#191414"/>
-                    </svg>
+                    <img class="logo__icon" src="/logo.webp" alt="Spotify Mod APK" width="40" height="40">
                     <span class="logo__text">Spotify Mod</span>
                 </a>
                 
@@ -3213,6 +3214,10 @@
                             <a href="../de/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag"><svg width="20" height="15" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#000"/><rect y="0" width="60" height="13.3" fill="#000"/><rect y="13.3" width="60" height="13.4" fill="#D00"/><rect y="26.7" width="60" height="13.3" fill="#FFCE00"/></svg></span> Deutsch</a>
                             <a href="../id/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag"><svg width="20" height="15" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="20" fill="#CE1126"/><rect y="20" width="60" height="20" fill="#fff"/></svg></span> Indonesia</a>
                             <a href="../it/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag"><svg width="20" height="15" viewBox="0 0 60 40" aria-hidden="true"><rect width="20" height="40" fill="#009246"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#CE2B37"/></svg></span> Italiano</a>
+                            <a href="../pt-br/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag"><svg width="20" height="15" viewBox="0 0 60 40" aria-hidden="true"><rect width="20" height="40" fill="#009B3A"/><rect x="20" width="20" height="40" fill="#FEDF00"/><rect x="40" width="20" height="40" fill="#002776"/></svg></span> Português</a>
+                            <a href="../es/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag"><svg width="20" height="15" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="10" fill="#AA151B"/><rect y="10" width="60" height="20" fill="#F1BF00"/><rect y="30" width="60" height="10" fill="#AA151B"/></svg></span> Español</a>
+                            <a href="../tr/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag"><svg width="20" height="15" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#E30A17"/><circle cx="23" cy="20" r="10" fill="#fff"/><circle cx="26" cy="20" r="8" fill="#E30A17"/><polygon points="33,20 27.5,22.5 29.5,20 27.5,17.5" fill="#fff"/></svg></span> Türkçe</a>
+                            <a href="../vi/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag"><svg width="20" height="15" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#DA251D"/><polygon points="30,8 33.5,19.5 45,19.5 35.7,26.5 39.2,38 30,31 20.8,38 24.3,26.5 15,19.5 26.5,19.5" fill="#FFFF00"/></svg></span> Tiếng Việt</a>
                         </div>
                     </div>
                 </nav>
@@ -4424,10 +4429,7 @@
             <div class="site-footer__top">
                 <div class="site-footer__brand">
                     <a href="../" class="site-footer__logo" aria-label="Spotify Mod APK - Retour à l'accueil">
-                        <svg class="site-footer__logo-icon" width="40" height="40" viewBox="0 0 168 168" aria-hidden="true" focusable="false" role="img">
-                            <circle cx="84" cy="84" r="84" fill="#1DB954"/>
-                            <path d="M117.8 117.8c-1.4 2.3-4.4 3-6.7 1.6-18.4-11.2-41.5-13.8-68.7-7.5-2.6.6-5.3-.9-5.9-3.5-.6-2.6.9-5.3 3.5-5.9 29.8-6.8 55.4-3.9 76.2 8.7 2.3 1.3 3 4.3 1.6 6.6zm10.3-21.8c-1.8 2.9-5.6 3.8-8.5 2-21.1-13-53.3-16.8-78.3-9.2-3.2 1-6.6-0.8-7.6-4-1-3.2.8-6.6 4-7.6 28.5-8.6 64-4.5 88.4 10.5 2.9 1.8 3.8 5.5 2 8.3zm0.9-22.7c-25.3-15-67-16.4-91.2-9.1-3.9 1.2-8-1-9.2-4.9-1.2-3.9 1-8 4.9-9.2 27.7-8.4 73.8-6.8 102.9 10.5 3.5 2.1 4.6 6.6 2.5 10.1-2.1 3.4-6.6 4.6-10 2.6z" fill="#191414"/>
-                        </svg>
+                        <img class="site-footer__logo-icon" src="/logo.webp" alt="Spotify Mod APK" width="40" height="40">
                         <span class="site-footer__logo-text">Spotify Mod</span>
                     </a>
                     <p class="site-footer__desc">Votre source de confiance pour le dernier Spotify Mod. Streamez musique, podcasts et livres audio avec toutes les fonctionnalités premium déverrouillées — sans abonnement.</p>

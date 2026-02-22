@@ -97,6 +97,70 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Portuguese (Brazilian) Homepage -->
+    <url>
+        <loc>https://spotifymod.com/pt-br/</loc>
+        <lastmod>2026-02-24</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Portuguese (Brazilian) APK Page -->
+    <url>
+        <loc>https://spotifymod.com/pt-br/apk/</loc>
+        <lastmod>2026-02-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Spanish Homepage -->
+    <url>
+        <loc>https://spotifymod.com/es/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Spanish APK Page -->
+    <url>
+        <loc>https://spotifymod.com/es/apk/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Turkish Homepage -->
+    <url>
+        <loc>https://spotifymod.com/tr/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Turkish APK Page -->
+    <url>
+        <loc>https://spotifymod.com/tr/apk/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Vietnamese Homepage -->
+    <url>
+        <loc>https://spotifymod.com/vi/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Vietnamese APK Page -->
+    <url>
+        <loc>https://spotifymod.com/vi/apk/</loc>
+        <lastmod>2026-02-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- Download Pages -->
     <url>
         <loc>https://spotifymod.com/apk/</loc>

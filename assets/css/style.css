@@ -2165,8 +2165,6 @@ p {
     transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
     z-index: 100002;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    max-height: 320px;
-    overflow-y: auto;
 }
 
 .lang-switcher.is-open .lang-switcher__dropdown {
@@ -2263,7 +2261,7 @@ p {
     }
 
     .lang-switcher.is-open .lang-switcher__dropdown {
-        max-height: 200px;
+        max-height: 500px;
         padding: 4px;
         opacity: 1;
         visibility: visible;
