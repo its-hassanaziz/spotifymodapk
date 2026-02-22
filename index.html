@@ -91,6 +91,7 @@
     <link rel="alternate" hreflang="fr" href="https://spotifymod.com/fr/">
     <link rel="alternate" hreflang="de" href="https://spotifymod.com/de/">
     <link rel="alternate" hreflang="id" href="https://spotifymod.com/id/">
+    <link rel="alternate" hreflang="it" href="https://spotifymod.com/it/">
     <link rel="alternate" hreflang="x-default" href="https://spotifymod.com/">
     
     <!-- Critical CSS Inlined for LCP - System fonts for max performance -->
@@ -438,7 +439,31 @@
             align-items: center;
             gap: 1rem;
         }
-        
+
+        /* Download Note */
+        .hero__download-note {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            margin-top: 0.75rem;
+            padding: 0.65rem 1rem;
+            background: rgba(30, 215, 96, 0.1);
+            border: 1px solid rgba(30, 215, 96, 0.3);
+            border-radius: 8px;
+            font-size: 0.82rem;
+            line-height: 1.45;
+            color: #b3b3b3;
+            max-width: 420px;
+        }
+        .hero__download-note svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+            color: #1ed760;
+        }
+        .hero__download-note strong {
+            color: #1ed760;
+        }
+
         /* Download Button - Spotify Green */
         .hero__download-btn {
             display: flex;
@@ -3211,6 +3236,7 @@
                             <a href="fr/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag"><svg width="20" height="15" viewBox="0 0 60 40" aria-hidden="true"><rect width="20" height="40" fill="#002395"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#ED2939"/></svg></span> Français</a>
                             <a href="de/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag"><svg width="20" height="15" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#000"/><rect y="0" width="60" height="13.3" fill="#000"/><rect y="13.3" width="60" height="13.4" fill="#D00"/><rect y="26.7" width="60" height="13.3" fill="#FFCE00"/></svg></span> Deutsch</a>
                             <a href="id/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag"><svg width="20" height="15" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="20" fill="#CE1126"/><rect y="20" width="60" height="20" fill="#fff"/></svg></span> Indonesia</a>
+                            <a href="it/" class="lang-switcher__link" role="menuitem"><span class="lang-switcher__flag"><svg width="20" height="15" viewBox="0 0 60 40" aria-hidden="true"><rect width="20" height="40" fill="#009246"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#CE2B37"/></svg></span> Italiano</a>
                         </div>
                     </div>
                 </nav>
@@ -3274,6 +3300,7 @@
                                 Share
                             </button>
                         </div>
+                        
                         <div class="hero__stats-row">
                             <div class="hero__stat-col">
                                 <span class="hero__stat-value">50M+</span>

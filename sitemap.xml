@@ -81,6 +81,22 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Italian Homepage -->
+    <url>
+        <loc>https://spotifymod.com/it/</loc>
+        <lastmod>2026-02-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Italian APK Page -->
+    <url>
+        <loc>https://spotifymod.com/it/apk/</loc>
+        <lastmod>2026-02-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- Download Pages -->
     <url>
         <loc>https://spotifymod.com/apk/</loc>
