@@ -31,6 +31,12 @@
             "purpose": "any"
         },
         {
+            "src": "/assets/images/icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
             "src": "/assets/images/icon-152x152.png",
             "sizes": "152x152",
             "type": "image/png",
