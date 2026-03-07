@@ -365,13 +365,6 @@
             line-height: 1.5;
         }
         
-        .contact-form__status--success {
-            display: block;
-            background: rgba(29, 185, 84, 0.1);
-            border: 1px solid rgba(29, 185, 84, 0.3);
-            color: #1DB954;
-        }
-        
         .contact-form__status--error {
             display: block;
             background: rgba(239, 68, 68, 0.1);
@@ -745,7 +738,7 @@
                                 <span id="submit-text">Send Message</span>
                             </button>
                             
-                            <div class="contact-form__status" id="form-status"></div>
+                            <div class="contact-form__status" id="form-status" style="display:none"></div>
                         </form>
                     </article>
                     
@@ -909,9 +902,7 @@
                         return emailjs.send('service_1n9vy47', 'template_y0wcdmk', templateParams);
                     })
                     .then(function() {
-                        statusEl.className = 'contact-form__status contact-form__status--success';
-                        statusEl.textContent = 'Message sent successfully! We\'ll get back to you soon.';
-                        form.reset();
+                        window.location.href = '/thank-you.html';
                     })
                     .catch(function() {
                         statusEl.className = 'contact-form__status contact-form__status--error';
