@@ -343,9 +343,40 @@
             transform: scale(1.02);
         }
         
+        .contact-form__submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
         .contact-form__submit svg {
             width: 20px;
             height: 20px;
+        }
+        
+        .contact-form__status {
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+            display: none;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+        
+        .contact-form__status--success {
+            display: block;
+            background: rgba(29, 185, 84, 0.1);
+            border: 1px solid rgba(29, 185, 84, 0.3);
+            color: #1DB954;
+        }
+        
+        .contact-form__status--error {
+            display: block;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #EF4444;
         }
         
         .visually-hidden {
@@ -686,37 +717,35 @@
                             <h2 class="contact-card__title">Send Us a Message</h2>
                         </div>
                         
-                        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
-                            <p class="visually-hidden" aria-hidden="true">
-                                <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                            </p>
-                            
+                        <form class="contact-form" id="contact-form">
                             <div class="contact-form__group">
                                 <label for="name" class="contact-form__label">Your Name</label>
-                                <input type="text" id="name" name="name" class="contact-form__input" placeholder="John Doe" aria-label="John Doe" required>
+                                <input type="text" id="name" name="from_name" class="contact-form__input" placeholder="John Doe" required>
                             </div>
                             
                             <div class="contact-form__group">
                                 <label for="email" class="contact-form__label">Email Address</label>
-                                <input type="email" id="email" name="email" class="contact-form__input" placeholder="john@example.com" aria-label="john@example.com" required>
+                                <input type="email" id="email" name="from_email" class="contact-form__input" placeholder="john@example.com" required>
                             </div>
                             
                             <div class="contact-form__group">
                                 <label for="subject" class="contact-form__label">Subject</label>
-                                <input type="text" id="subject" name="subject" class="contact-form__input" placeholder="How can we help?" aria-label="How can we help?">
+                                <input type="text" id="subject" name="subject" class="contact-form__input" placeholder="How can we help?">
                             </div>
                             
                             <div class="contact-form__group">
                                 <label for="message" class="contact-form__label">Message</label>
-                                <textarea id="message" name="message" class="contact-form__textarea" placeholder="Write your message here..." aria-label="Write your message here..." required></textarea>
+                                <textarea id="message" name="message" class="contact-form__textarea" placeholder="Write your message here..." required></textarea>
                             </div>
                             
-                            <button type="submit" class="contact-form__submit">
+                            <button type="submit" class="contact-form__submit" id="contact-submit">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                                 </svg>
-                                Send Message
+                                <span id="submit-text">Send Message</span>
                             </button>
+                            
+                            <div class="contact-form__status" id="form-status"></div>
                         </form>
                     </article>
                     
@@ -846,5 +875,54 @@
     
     <!-- JavaScript - Deferred for performance -->
     <script src="../assets/js/main.js" defer></script>
+    
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init('45Gm8VuISUbDoKmuU');
+            
+            var form = document.getElementById('contact-form');
+            var submitBtn = document.getElementById('contact-submit');
+            var submitText = document.getElementById('submit-text');
+            var statusEl = document.getElementById('form-status');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                submitBtn.disabled = true;
+                submitText.textContent = 'Sending...';
+                statusEl.className = 'contact-form__status';
+                statusEl.textContent = '';
+                
+                var templateParams = {
+                    from_name: form.from_name.value,
+                    from_email: form.from_email.value,
+                    subject: form.subject.value || 'No Subject',
+                    message: form.message.value
+                };
+                
+                // Send admin notification
+                emailjs.send('service_1n9vy47', 'template_jlgbowa', templateParams)
+                    .then(function() {
+                        // Send auto-reply to user
+                        return emailjs.send('service_1n9vy47', 'template_y0wcdmk', templateParams);
+                    })
+                    .then(function() {
+                        statusEl.className = 'contact-form__status contact-form__status--success';
+                        statusEl.textContent = 'Message sent successfully! We\'ll get back to you soon.';
+                        form.reset();
+                    })
+                    .catch(function() {
+                        statusEl.className = 'contact-form__status contact-form__status--error';
+                        statusEl.textContent = 'Something went wrong. Please try again or email us at support@spotifymod.com';
+                    })
+                    .finally(function() {
+                        submitBtn.disabled = false;
+                        submitText.textContent = 'Send Message';
+                    });
+            });
+        })();
+    </script>
 </body>
 </html>
